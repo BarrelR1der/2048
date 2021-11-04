@@ -221,8 +221,8 @@ switch (move) {
 									TA[12]=TA[12]+TA[13];
 								}
                 break;
-						case 3: // Down
-							  if ( TA[12]==TA[8] && TA[4]==TA[0])
+	   case 3: // Down
+		if ( TA[12]==TA[8] && TA[4]==TA[0])
 								{
 									TA[12]= TA[12]+TA[8];
 									TA[4]= TA[4]+TA[0];
