@@ -6,7 +6,7 @@ void UpdateDisplay(){
 	
 	int movement;
 	
-	for (slot=1; slot<=16; i++){
+	for (slot=1; slot<=16; slot++){
 		switch(slot){
 			case '1' : 
 				column = 3;
