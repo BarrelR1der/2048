@@ -199,7 +199,7 @@ void printnull(int x, int y)
 	dis_cmd_1(0x80);
 	setColumn(x+9);
 	dis_cmd_1(0x80);
-	setColumn(x+10);
+	setColumn(x+10);               // print nothing
 	dis_cmd_1(0x80);
 	setColumn(x+11);
 	dis_cmd_1(0x80);
@@ -250,7 +250,7 @@ void printnull(int x, int y)
 	dis_cmd_1(0x01);
 	setColumn(x+9);
 	dis_cmd_1(0x01); 
-	setColumn(x+10);
+	setColumn(x+10);        //print nothing
 	dis_cmd_1(0x01);
 	setColumn(x+11);
 	dis_cmd_1(0x01);
