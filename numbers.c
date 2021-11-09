@@ -3,10 +3,12 @@ void UpdateDisplay(){
 	int slot;
 	int column;
 	int page;
-	
-	int movement;
+	int number;
+
 	
 	for (slot=1; slot<=16; slot++){
+		number = front(DisplayQueue);
+		dequeue(DisplayQueue);
 		switch(slot){
 			case '1' : 
 				column = 3;
@@ -78,7 +80,7 @@ void UpdateDisplay(){
 				break;
 		}	
 		
-		switch(Queue[i]){
+		switch(number){                                            // Checks number from Queue and calls print to display based on number
 			case '0' : printnull(column,page);
 				break;
 			case '2' : print2(column,page);
@@ -101,9 +103,10 @@ void UpdateDisplay(){
 				break;
 			case '1024' : print1024(column,page);
 				break;
-			case '2048' : print2048(column,page);
+			case '2048' : printwin();
 				break;
 			default: printnull(column,page);
+				break;
 		
 		
 	}
@@ -175,7 +178,7 @@ void setPage(){                                         //done
 
 
 
-void printnull(int x, int y)
+void printnull(int x, int y) // prints empty tile
 {
 	setPage(y);
 
@@ -280,7 +283,7 @@ void printnull(int x, int y)
 	dis_cmd_1(0xFF);
 }
 
-void print2(int x, int y)
+void print2(int x, int y)  //prints a 2 to the tile
 {
 	setPage(y);
 
@@ -1333,107 +1336,132 @@ void print1024(int x, int y)
 	dis_cmd_1(0xFF);
 }
 
-void print2048(int x, int y)
+void printwin()
 {
-	setPage(y);
+	turn_off_all();
+	int x = 42;
+	int y = 2;
+	
+	setPage(y); 
 
 	setColumn(x);
-	dis_cmd_1(0xFF); 
+	dis_cmd_1(0x00); //
 	setColumn(x+1);
-	dis_cmd_1(0x80); // 
+	dis_cmd_1(0xC0); 
 	setColumn(x+2);
-	dis_cmd_1(0x84);
+	dis_cmd_1(0x20);
 	setColumn(x+3);
-	dis_cmd_1(0x88);      //Top 2
+	dis_cmd_1(0x1E);      // Y
 	setColumn(x+4);
-	dis_cmd_1(0x88); 
+	dis_cmd_1(0x20); 
 	setColumn(x+5);
-	dis_cmd_1(0x87); //
+	dis_cmd_1(0xC0); //
 	setColumn(x+6);
-	dis_cmd_1(0x80); //     
+	dis_cmd_1(0x00); //     
 	setColumn(x+7);
-	dis_cmd_1(0x87);
+	dis_cmd_1(0x7E);
 	setColumn(x+8);
-	dis_cmd_1(0x88);      //Top 0
+	dis_cmd_1(0x82);      // O
 	setColumn(x+9);
-	dis_cmd_1(0x88); 
+	dis_cmd_1(0x82); 
 	setColumn(x+10);
-	dis_cmd_1(0x87); //
+	dis_cmd_1(0x82); 
 	setColumn(x+11);
-	dis_cmd_1(0x80);        
+	dis_cmd_1(0x7E); //       
 	setColumn(x+12);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x00); //
 	setColumn(x+13);
-	dis_cmd_1(0x8F); 
+	dis_cmd_1(0xFE); 
 	setColumn(x+14);
-	dis_cmd_1(0x81);   // Top 4
+	dis_cmd_1(0x02);   // Top U
 	setColumn(x+15);
-	dis_cmd_1(0x81);
+	dis_cmd_1(0x02);
 	setColumn(x+16);
-	dis_cmd_1(0x8F); //
+	dis_cmd_1(0x02); 
 	setColumn(x+17);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0xFE); //
 	setColumn(x+18);
-	dis_cmd_1(0x86); 
-	setColumn(x+19);
-	dis_cmd_1(0x89);     // Top 8
-	setColumn(x+20);
-	dis_cmd_1(0x89);
-	setColumn(x+21);
-	dis_cmd_1(0x86); //
-	setColumn(x+22);
-	dis_cmd_1(0x80);
-	setColumn(x+23);
-	dis_cmd_1(0xFF);
+	dis_cmd_1(0x00); 
 	
-	SetPage(y+1);
-	
+	setPage(y+1); 
+
 	setColumn(x);
-	dis_cmd_1(0xFF);
+	dis_cmd_1(0x00); //
 	setColumn(x+1);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0xFC); 
 	setColumn(x+2);
-	dis_cmd_1(0x31);
+	dis_cmd_1(0x02);
 	setColumn(x+3);
-	dis_cmd_1(0x51);     // Bot 2
+	dis_cmd_1(0x0C);      // W
 	setColumn(x+4);
-	dis_cmd_1(0x91); 
+	dis_cmd_1(0x02); 
 	setColumn(x+5);
-	dis_cmd_1(0x11); //
+	dis_cmd_1(0x0C); //
 	setColumn(x+6);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x00); //     
 	setColumn(x+7);
-	dis_cmd_1(0xE1);
+	dis_cmd_1(0x00);
 	setColumn(x+8);
-	dis_cmd_1(0x11);      // Bot 0
+	dis_cmd_1(0x82);      // I
 	setColumn(x+9);
-	dis_cmd_1(0x11); 
+	dis_cmd_1(0xFE); 
 	setColumn(x+10);
-	dis_cmd_1(0xE1); //
-	setColumn(x+11); 
-	dis_cmd_1(0x01);         
-	setColumn(x+12);            
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x82); 
+	setColumn(x+11);
+	dis_cmd_1(0x00); //       
+	setColumn(x+12);
+	dis_cmd_1(0x00); //
 	setColumn(x+13);
-	dis_cmd_1(0x01); 
-	setColumn(x+14); 
-	dis_cmd_1(0x01);      // Bot 4
+	dis_cmd_1(0xFE); 
+	setColumn(x+14);
+	dis_cmd_1(0x02);   // N
 	setColumn(x+15);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x02);
 	setColumn(x+16);
-	dis_cmd_1(0xF1); //   
+	dis_cmd_1(0x02); 
 	setColumn(x+17);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0xFE); //
 	setColumn(x+18);
-	dis_cmd_1(0xE1); 
-	setColumn(x+19);
-	dis_cmd_1(0x11);       // Bot 8
-	setColumn(x+20);
-	dis_cmd_1(0x11);
-	setColumn(x+21);
-	dis_cmd_1(0xE1); //
-	setColumn(x+22);
-	dis_cmd_1(0x01);
-	setColumn(x+23);
-	dis_cmd_1(0xFF);
+	dis_cmd_1(0x00); 
+	
+	setPage(y+2); 
+
+	setColumn(x);    //
+	dis_cmd_1(0x43); 
+	setColumn(x+1);
+	dis_cmd_1(0x85); 
+	setColumn(x+2);           // 2
+	dis_cmd_1(0x89);
+	setColumn(x+3);
+	dis_cmd_1(0x71); //     
+	setColumn(x+4);
+	dis_cmd_1(0x00); //
+	setColumn(x+5);
+	dis_cmd_1(0x7E);
+	setColumn(x+6);
+	dis_cmd_1(0x81);          // 0
+	setColumn(x+7);
+	dis_cmd_1(0x81);
+	setColumn(x+8);
+	dis_cmd_1(0x7E); //     
+	setColumn(x+9);
+	dis_cmd_1(0x00); //
+	setColumn(x+10);
+	dis_cmd_1(0xF0); 
+	setColumn(x+11);
+	dis_cmd_1(0x10);       // 4 
+	setColumn(x+12);
+	dis_cmd_1(0x10); 
+	setColumn(x+13);
+	dis_cmd_1(0xFF); //
+	setColumn(x+14);
+	dis_cmd_1(0x00); //
+	setColumn(x+15);
+	dis_cmd_1(0x6E);
+	setColumn(x+16);
+	dis_cmd_1(0x91);        // 8
+	setColumn(x+17);
+	dis_cmd_1(0x91); 
+	setColumn(x+18);
+	dis_cmd_1(0x6E); //
 }	
