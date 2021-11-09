@@ -61,7 +61,7 @@ int main( )
     init_btn(1 << 8, &(GPIOB->IDR), &btn_a); // Init state machine for PB8
 		init_btn(1 << 9, &(GPIOB->IDR), &btn_b); // Init state machine for PB9
 		init_btn(1 << 2, &(GPIOA->IDR), &btn_c); // Init state machine for PA2
-		init_btn(1 << 3, &(GPIOA->IDR), &btn_b); // Init state machine for PA3			
+		init_btn(1 << 3, &(GPIOA->IDR), &btn_d); // Init state machine for PA3			
     
     while(1){
         ea = update_btn(&btn_a);
