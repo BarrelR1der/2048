@@ -27,7 +27,6 @@ int main( )
 				enum btn_edge ec;
 				enum btn_edge ed;
 									  
-    gpio_init();
     init_btn(1 << 8, &(GPIOB->IDR), &btn_a); // Init state machine for PB8
 		init_btn(1 << 9, &(GPIOB->IDR), &btn_b); // Init state machine for PB9
 		init_btn(1 << 2, &(GPIOA->IDR), &btn_c); // Init state machine for PA2
