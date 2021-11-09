@@ -17,6 +17,8 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <knob_main.c>
+#include <2048_Tile_Array.c>
 
 
 
