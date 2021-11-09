@@ -71,22 +71,22 @@ int main( )
 	    
 		//Send a 1 to the queue for right movement
 		if (ea == ACTIVATING_EDGE && eb == INACTIVE){
-			
+			enqueue(ButtonQueue, 1);
 		}
 
 		//Send a 3 to the queue for left movement
 		if (ea==ACTIVATING_EDGE && eb==ACTIVE){
-		
+			enqueue(ButtonQueue, 3);
 		}
 	    
 	    	//Send a 0 to the queue for up movement
 		if (ec==ACTIVATING_EDGE && ed==INACTIVE){
-		
+			enqueue(ButtonQueue, 0);
 		}
 		
 	   	//Sned a 2 to the queue for down movement
 		if (ec==ACTIVATING_EDGE && ed==ACTIVE){
-			
+			enqueue(ButtonQueue, 2);
 		}
     }
 	}
