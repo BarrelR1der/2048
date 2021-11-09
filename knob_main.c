@@ -1,6 +1,6 @@
 #include "stm32l053xx.h"
 #include "stdint.h"
-#include "fsm_btn.h"
+#include "btn.h"
 
 
 void gpio_init(void);
