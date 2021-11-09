@@ -1,15 +1,38 @@
 // Cory Thatcher, Evan Dickerson, Matthew Childs
 #include "stm32l053xx.h"
-
+#include "2048 Main.c"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 // Function List
-void Moving(uint32_t direction);
-
+int main(void);
+void Moving(void);
+void SpawnRandom2(void);
 int static TA[16]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 
-void Moving(uint32_t direction)
+
+void SpawnRandom2(void)
 {
-int move = Queue[0];
+	int TileArray2[16];
+	srand(time(NULL));
+	for (int i =0; i<16;i++)
+	{
+	    
+		if (TA[i]==0){
+			TileArray2[i]=i;
+		}
+		
+	}
+   int Length = sizeof(TileArray2)/sizeof(TA[0]);
+	int random_number= rand() % Length+1;
+	TA[TileArray2[random_number]]=2;
+
+
+}
+void Moving(void)
+{
+int move = front(ButtonQueue);
 switch (move) {
             case 0: //UP
                 if ( TA[12]==TA[8] && TA[4]==TA[0])
@@ -293,9 +316,8 @@ switch (move) {
 							break;
 						
             default:
-                printf("Out of range");
+                
                 break;
-        }
-        return 0;
+        }  
 
 }
