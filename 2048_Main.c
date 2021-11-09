@@ -290,8 +290,8 @@ int main(void)
 	
 	while(1)
 	{
-
-                      
-
+		UpdateKnobs();
+		UpdateArray();
+		UpdateDisplay();
 	}
 }
