@@ -68,26 +68,25 @@ int main( )
 				eb = update_btn(&btn_b);
 				ec = update_btn(&btn_c);
 				ed = update_btn(&btn_d);
-			
+	    
+		//Send a 1 to the queue for right movement
 		if (ea == ACTIVATING_EDGE && eb == INACTIVE){
-			//GPIOA->ODR = 1 << 5; // Toggle LED
-			//Right
+			
 		}
 
-		
+		//Send a 3 to the queue for left movement
 		if (ea==ACTIVATING_EDGE && eb==ACTIVE){
-			//GPIOA->ODR = 0 << 5;
-			//Left
+		
 		}
-
+	    
+	    	//Send a 0 to the queue for up movement
 		if (ec==ACTIVATING_EDGE && ed==INACTIVE){
-			//GPIOA->ODR = 0 << 5;
-			//Up
+		
 		}
 		
+	   	//Sned a 2 to the queue for down movement
 		if (ec==ACTIVATING_EDGE && ed==ACTIVE){
-			//GPIOA->ODR = 0 << 5;
-			//Down
+			
 		}
     }
 	}
