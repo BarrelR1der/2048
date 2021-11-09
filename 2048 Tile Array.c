@@ -8,6 +8,7 @@
 int main(void);
 void Moving(void);
 void SpawnRandom2(void);
+void UpdateArray(void);
 int static TA[16]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 
@@ -30,9 +31,21 @@ void SpawnRandom2(void)
 
 
 }
+
+void UpdateArray(void)
+{
+	SpawnRandom2();
+	Moving();
+	for(int i=0; i<=16; i++){
+		enqueue(DisplayQueue, TA[i])
+	}
+}
+
+
 void Moving(void)
 {
 int move = front(ButtonQueue);
+dequeue(ButtonQueue);
 switch (move) {
             case 0: //UP
                 if ( TA[12]==TA[8] && TA[4]==TA[0])
