@@ -2,9 +2,9 @@
 #include "stdint.h"
 #include "btn.h"
 
-int main(void);
-
-int main( )
+void init_knobs(void);
+void UpdateKnobs(void);
+void init_knobs()
 {
 				static struct btn_struct btn_a = {.mask_for_btn= 0<<8, 
                                       .pin_ptr = &(GPIOA->IDR),
@@ -32,7 +32,7 @@ int main( )
 		init_btn(1 << 2, &(GPIOA->IDR), &btn_c); // Init state machine for PA2
 		init_btn(1 << 3, &(GPIOA->IDR), &btn_d); // Init state machine for PA3			
     
-    while(1){
+    void UpdateKnobs(){
         	ea = update_btn(&btn_a);
 		eb = update_btn(&btn_b);
 		ec = update_btn(&btn_c);
