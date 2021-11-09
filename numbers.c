@@ -1,4 +1,4 @@
-
+// Matthew Childs
 void UpdateDisplay(){
 	int slot;
 	int column;
@@ -6,10 +6,10 @@ void UpdateDisplay(){
 	int number;
 
 	
-	for (slot=1; slot<=16; slot++){
-		number = front(DisplayQueue);
-		dequeue(DisplayQueue);
-		switch(slot){
+	for (slot=1; slot<=16; slot++){                  
+		number = front(DisplayQueue);              // pulls value from queue and dequeues to next item in queue     
+		dequeue(DisplayQueue); 
+		switch(slot){                              // switch cases set column and page to correct bit on the display
 			case '1' : 
 				column = 3;
 				page = 0;
@@ -112,13 +112,6 @@ void UpdateDisplay(){
 	}
 		
 	
-	
-	
-	
-	
-	
-	
-	
 }
 
 // Anchor Bits
@@ -126,14 +119,7 @@ void UpdateDisplay(){
 // 3,2 27,2 51,2 75,2
 // 3,4 27,4 51,4 75,4
 // 3,6 27,6 51,6 75,6
-
-
-
-
-
-
-
-
+	
 
 void setColumn(int t){                                       //done 
 	int x = 0;
@@ -164,18 +150,6 @@ void setPage(){                                         //done
 	
 	
 }
-
-
-// Anchor Bits
-// 3,0 27,0 51,0 75,0
-// 3,2 27,2 51,2 75,2
-// 3,4 27,4 51,4 75,4
-// 3,6 27,6 51,6 75,6
-
-
-
-
-
 
 
 void printnull(int x, int y) // prints empty tile
