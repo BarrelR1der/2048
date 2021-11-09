@@ -84,7 +84,7 @@ int main( )
 			enqueue(ButtonQueue, 0);
 		}
 		
-	   	//Sned a 2 to the queue for down movement
+	   	//Send a 2 to the queue for down movement
 		if (ec==ACTIVATING_EDGE && ed==ACTIVE){
 			enqueue(ButtonQueue, 2);
 		}
