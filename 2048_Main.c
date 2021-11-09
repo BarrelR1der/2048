@@ -191,6 +191,27 @@ void init_gpio(void)
 	// PA1 is the command bit, output
 	GPIOA->MODER &= ~(GPIO_MODER_MODE1_Msk);
 	GPIOA->MODER |= 1 << GPIO_MODER_MODE1_Pos;
+	
+	//Knob Inputs
+	GPIOB->MODER &= ~GPIO_MODER_MODE8_Msk;
+    	GPIOB->MODER |= 0 << GPIO_MODER_MODE8_Pos; // PB8 Digital INPUT
+    	GPIOB->PUPDR &= ~GPIO_PUPDR_PUPD8_Msk;
+    	GPIOB->PUPDR |= 0x01 << GPIO_PUPDR_PUPD8_Pos; // Pull-up engaged
+    
+    	GPIOB->MODER &= ~GPIO_MODER_MODE9_Msk;
+    	GPIOB->MODER |= 0 << GPIO_MODER_MODE9_Pos; // PB9 Digital INPUT
+    	GPIOB->PUPDR &= ~GPIO_PUPDR_PUPD9_Msk;
+    	GPIOB->PUPDR |= 0x01 << GPIO_PUPDR_PUPD9_Pos; // Pull-up engaged
+	
+	GPIOA->MODER &= ~GPIO_MODER_MODE2_Msk;
+    	GPIOA->MODER |= 0 << GPIO_MODER_MODE2_Pos; // PA2 Digital INPUT
+    	GPIOA->PUPDR &= ~GPIO_PUPDR_PUPD2_Msk;
+    	GPIOA->PUPDR |= 0x01 << GPIO_PUPDR_PUPD2_Pos; // Pull-up engaged
+	
+	GPIOA->MODER &= ~GPIO_MODER_MODE3_Msk;
+    	GPIOA->MODER |= 0 << GPIO_MODER_MODE3_Pos; // PA3 Digital INPUT
+    	GPIOA->PUPDR &= ~GPIO_PUPDR_PUPD3_Msk;
+    	GPIOA->PUPDR |= 0x01 << GPIO_PUPDR_PUPD3_Pos; // Pull-up engaged
 }
 
 void init_spi(void)
