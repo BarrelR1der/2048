@@ -1,0 +1,33 @@
+// Cory Thatcher, Evan Dickerson, Matthew Childs
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+// Function List
+int main(void);
+
+
+int main(void)
+{
+    
+	int TileArray[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	int TileArray2[16];
+	srand(time(NULL));
+	for (int i =0; i<16;i++)
+	{
+	    
+		if (TileArray[i]==0){
+			TileArray2[i]=i;
+		}
+		
+	}
+    int Length = sizeof(TileArray2)/sizeof(TileArray[0]);
+	int random_number= rand() % Length+1;
+	TileArray[TileArray2[random_number]]=2;
+  
+	/*for (int i = 0; i<16; i++){
+		
+	printf("%d\n",TileArray[i]);
+	}*/
+	
+}
+	
