@@ -348,6 +348,7 @@ switch (move) {
 								{
 									TA[0]=TA[4]+TA[0];
 								}
+								else {}
 								if (TA[13]==TA[9] && TA[5]==TA[1])
 								{
 									TA[9]=TA[13]+TA[9];
@@ -365,6 +366,7 @@ switch (move) {
 								{
 									TA[1]=TA[5]+TA[1];
 								}
+								else{}
 								if (TA[14]==TA[10] && TA[6]==TA[2])
 								{
 									TA[10]=TA[14]+TA[10];
@@ -382,6 +384,7 @@ switch (move) {
 								{
 									TA[2]=TA[6]+TA[2];
 								}
+								else {}
 								if (TA[15]==TA[11] && TA[7]==TA[3])
 								{
 									TA[11]=TA[15]+TA[11];
@@ -399,6 +402,7 @@ switch (move) {
 								{
 									TA[3]=TA[7]+TA[3];
 								}
+								else {}
                 break;
             case 1: // Right
                 if ( TA[3]==TA[2] && TA[1]==TA[0])
@@ -418,6 +422,7 @@ switch (move) {
 								{
 									TA[1]=TA[1]+TA[0];
 								}
+								else{}
 								if (TA[7]==TA[6] && TA[5]==TA[4])
 								{
 									TA[7]=TA[7]+TA[6];
@@ -435,6 +440,7 @@ switch (move) {
 								{
 									TA[5]=TA[5]+TA[4];
 								}
+								else{}
 								if (TA[11]==TA[10] && TA[9]==TA[8])
 								{
 									TA[11]=TA[11]+TA[10];
@@ -452,6 +458,7 @@ switch (move) {
 								{
 									TA[9]=TA[9]+TA[8];
 								}
+								else{}
 								if (TA[15]==TA[14] && TA[13]==TA[12])
 								{
 									TA[15]=TA[14]+TA[13];
@@ -469,6 +476,7 @@ switch (move) {
 								{
 									TA[13]=TA[12]+TA[13];
 								}
+								else{}
                 break;
             case 2: // Left
                 if ( TA[3]==TA[2] && TA[1]==TA[0])
@@ -488,6 +496,7 @@ switch (move) {
 								{
 									TA[0]=TA[1]+TA[0];
 								}
+								else{}
 								if (TA[7]==TA[6] && TA[5]==TA[4])
 								{
 									TA[6]=TA[7]+TA[6];
@@ -505,6 +514,7 @@ switch (move) {
 								{
 									TA[4]=TA[5]+TA[4];
 								}
+								else{}
 								if (TA[11]==TA[10] && TA[9]==TA[8])
 								{
 									TA[10]=TA[11]+TA[10];
@@ -522,6 +532,7 @@ switch (move) {
 								{
 									TA[8]=TA[9]+TA[8];
 								}
+								else{}
 								if (TA[15]==TA[14] && TA[13]==TA[12])
 								{
 									TA[14]=TA[15]+TA[14];
@@ -539,6 +550,7 @@ switch (move) {
 								{
 									TA[12]=TA[12]+TA[13];
 								}
+								else{}
                 break;
 	   case 3: // Down
 		if ( TA[12]==TA[8] && TA[4]==TA[0])
@@ -558,6 +570,7 @@ switch (move) {
 								{
 									TA[4]=TA[4]+TA[0];
 								}
+								else{}
 								if (TA[13]==TA[9] && TA[5]==TA[1])
 								{
 									TA[13]=TA[13]+TA[9];
@@ -575,6 +588,7 @@ switch (move) {
 								{
 									TA[5]=TA[5]+TA[1];
 								}
+								else{}
 								if (TA[14]==TA[10] && TA[6]==TA[2])
 								{
 									TA[14]=TA[14]+TA[10];
@@ -592,6 +606,7 @@ switch (move) {
 								{
 									TA[6]=TA[6]+TA[2];
 								}
+								else{}
 								if (TA[15]==TA[11] && TA[7]==TA[3])
 								{
 									TA[15]=TA[15]+TA[11];
@@ -609,6 +624,7 @@ switch (move) {
 								{
 									TA[7]=TA[7]+TA[3];
 								}
+								else{}
 							break;
 						
             default:
