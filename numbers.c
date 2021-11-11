@@ -1,8 +1,46 @@
 // Matthew Childs
+#include "stm32l053xx.h"
+
+void UpdateDisplay(void);
+void setColumn(int);
+void setPage(uint32_t);
+void printnull(int,uint32_t);
+void print2(int, uint32_t);
+void print4(int, uint32_t);
+void print8(int, uint32_t);
+void print16(int, uint32_t);
+void print32(int, uint32_t);
+void print64(int, uint32_t);
+void print128(int, uint32_t);
+void print256(int, uint32_t);
+void print512(int, uint32_t);
+void print1024(int, uint32_t);
+void printwin(void);
+void printlose(void);
+
+
+extern void dis_cmd_0(uint32_t com);
+extern void dis_cmd_1(uint32_t com);
+extern int isEmpty(struct Queue*);
+extern int dequeue(struct Queue*);
+extern int front(struct Queue*);\
+extern void turn_off_all(void);
+
+struct Queue {
+    int front, rear, size;
+    unsigned capacity;
+    int* array;
+};
+
+extern struct Queue* ButtonQueue;
+extern struct Queue* DisplayQueue;
+
+
 void UpdateDisplay(){
+	//printlose();
 	int slot;
 	int column;
-	int page;
+	uint32_t page;
 	int number;
 	if(isEmpty(DisplayQueue)){}        // ends the fuction if there are no values to display
 	else{
@@ -140,8 +178,7 @@ void setColumn(int t){                                       //done
 }
 
 
-void setPage(){                                         //done
-	//uint32_t P = page_adr();
+void setPage(uint32_t P){                                         //done
 	volatile uint32_t pagecmd; 
 	
 	pagecmd = P | 0xB0;                                  //finds bits for page address
@@ -152,7 +189,7 @@ void setPage(){                                         //done
 }
 
 
-void printnull(int x, int y) // prints empty tile
+void printnull(int x, uint32_t y) // prints empty tile
 {
 	setPage(y);
 
@@ -205,7 +242,7 @@ void printnull(int x, int y) // prints empty tile
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -257,7 +294,7 @@ void printnull(int x, int y) // prints empty tile
 	dis_cmd_1(0xFF);
 }
 
-void print2(int x, int y)  //prints a 2 to the tile
+void print2(int x, uint32_t y)  //prints a 2 to the tile
 {
 	setPage(y);
 
@@ -310,7 +347,7 @@ void print2(int x, int y)  //prints a 2 to the tile
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -362,7 +399,7 @@ void print2(int x, int y)  //prints a 2 to the tile
 	dis_cmd_1(0xFF);
 }	
 	
-void print4(int x, int y)
+void print4(int x, uint32_t y)
 {
 	setPage(y);
 
@@ -415,7 +452,7 @@ void print4(int x, int y)
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -467,7 +504,7 @@ void print4(int x, int y)
 	dis_cmd_1(0xFF);
 }		
 	
-void print8(int x, int y)
+void print8(int x, uint32_t y)
 {
 	setPage(y);
 
@@ -520,7 +557,7 @@ void print8(int x, int y)
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -572,7 +609,7 @@ void print8(int x, int y)
 	dis_cmd_1(0xFF);
 }		
 
-void print16(int x, int y)
+void print16(int x, uint32_t y)
 {
 	setPage(y);
 
@@ -625,7 +662,7 @@ void print16(int x, int y)
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -678,7 +715,7 @@ void print16(int x, int y)
 }	
 
 
-void print32(int x, int y)
+void print32(int x, uint32_t y)
 {
 	setPage(y);
 
@@ -731,7 +768,7 @@ void print32(int x, int y)
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -783,7 +820,7 @@ void print32(int x, int y)
 	dis_cmd_1(0xFF);
 }	
 
-void print64(int x, int y)
+void print64(int x, uint32_t y)
 {
 	setPage(y);
 
@@ -836,7 +873,7 @@ void print64(int x, int y)
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -889,7 +926,7 @@ void print64(int x, int y)
 }		
 
 
-void print128(int x, int y)
+void print128(int x, uint32_t y)
 {
 	setPage(y);
 
@@ -942,7 +979,7 @@ void print128(int x, int y)
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -994,7 +1031,7 @@ void print128(int x, int y)
 	dis_cmd_1(0xFF);
 }	
 
-void print256(int x, int y)
+void print256(int x, uint32_t y)
 {
 	setPage(y);
 
@@ -1047,7 +1084,7 @@ void print256(int x, int y)
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -1099,7 +1136,7 @@ void print256(int x, int y)
 	dis_cmd_1(0xFF);
 }	
 
-void print512(int x, int y)
+void print512(int x, uint32_t y)
 {
 	setPage(y);
 
@@ -1152,7 +1189,7 @@ void print512(int x, int y)
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -1205,7 +1242,7 @@ void print512(int x, int y)
 }	
 
 
-void print1024(int x, int y)
+void print1024(int x, uint32_t y)
 {
 	setPage(y);
 
@@ -1258,7 +1295,7 @@ void print1024(int x, int y)
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	SetPage(y+1);
+	setPage(y-1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
@@ -1314,7 +1351,7 @@ void printwin()
 {
 	turn_off_all();
 	int x = 42;
-	int y = 2;
+	uint32_t y = 2;
 	
 	setPage(y); 
 
@@ -1444,7 +1481,7 @@ void printlose()
 {
 	turn_off_all();
 	int x = 42;
-	int y = 3;
+	uint32_t y = 3;
 	
 	setPage(y); 
 

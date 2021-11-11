@@ -17,8 +17,7 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <knob_main.c>
-#include <2048_Tile_Array.c>
+
 
 
 
@@ -31,10 +30,10 @@ void dis_cmd_0(uint32_t com);
 void dis_cmd_1(uint32_t com);
 void unfill(uint32_t lsb,uint32_t msb);
 void turn_off_all(void);
-extern void up(void);
-extern void down(void);
-extern void left(void);      
-extern void right(void);
+extern void UpdateKnobs(void);
+extern void UpdateArray(void);
+extern void UpdateDisplay(void);
+
 
 struct Queue {
     int front, rear, size;
@@ -271,12 +270,16 @@ void turn_off_all(void)
 	}
 }
 
+struct Queue* ButtonQueue;
+struct Queue* DisplayQueue;
+
 
 int main(void)
+
 {
 	//setting up the queues
-	struct Queue* ButtonQueue = createQueue(1);
-   	struct Queue* DisplayQueue = createQueue(16);
+	ButtonQueue = createQueue(1);
+	DisplayQueue = createQueue(16);
 	// gpio
 	init_gpio();
 	// spi
@@ -286,8 +289,7 @@ int main(void)
 	//GPOIA->ODR |= 1 << 0;
 	
 	turn_off_all();
-
-	
+	print1024(0,1);
 	while(1)
 	{
 		UpdateKnobs();

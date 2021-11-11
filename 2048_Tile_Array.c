@@ -1,9 +1,9 @@
 // Cory Thatcher, Evan Dickerson, Matthew Childs
 #include "stm32l053xx.h"
-#include "2048 Main.c"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 // Function List
 int main(void);
 void Moving(void);
@@ -12,6 +12,34 @@ void UpdateArray(void);
 void CheckLose(void);
 int static TA[16]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
+
+extern int isEmpty(struct Queue*);
+extern int dequeue(struct Queue*);
+extern int front(struct Queue*);
+extern void enqueue(struct Queue*, int );
+
+extern struct Queue* ButtonQueue;
+extern struct Queue* DisplayQueue;
+
+struct Queue {
+    int front, rear, size;
+    unsigned capacity;
+    int* array;
+};
+
+void UpdateArray(void)
+{
+	//printwin();
+	if(isEmpty(ButtonQueue)){}       //if no input from knobs then skips the task
+	else{
+		CheckLose();
+		Moving();
+		SpawnRandom2();
+		for(int i=0; i<=16; i++){
+			enqueue(DisplayQueue, TA[i]);
+		}
+	}
+}
 
 
 void SpawnRandom2(void)
@@ -33,18 +61,6 @@ void SpawnRandom2(void)
 
 }
 
-void UpdateArray(void)
-{
-	if(isEmpty(ButtonQueue){}       //if no input from knobs then skips the task
-	else{
-		CheckLose();
-		Moving();
-		SpawnRandom2();
-		for(int i=0; i<=16; i++){
-			enqueue(DisplayQueue, TA[i])
-		}
-	}
-}
 
 void CheckLose(void)
 {

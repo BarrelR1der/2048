@@ -2,14 +2,14 @@
 #include <stdint.h>
 #include "btn.h"
 #include <assert.h>
-extern void gpio_init(void);
+extern void init_gpio(void);
 
 // Initializer:
 void init_btn(uint32_t mask_for_btn, 
               volatile uint32_t *pin_ptr, 
               struct btn_struct *pb)  
 {
-    gpio_init();
+    init_gpio();
     pb->state = UP;
     pb->mask_for_btn = mask_for_btn;
     pb->pin_ptr = pin_ptr;
@@ -23,6 +23,7 @@ enum btn_level read_btn(struct btn_struct *pb) // Correct for ACTIVE-LOW.
 
 enum btn_edge update_btn(struct btn_struct *pb)
 {
+	
   enum btn_level b = read_btn(pb);
 	enum btn_edge e = INACTIVE; 
     switch(pb->state)
