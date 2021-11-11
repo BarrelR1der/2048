@@ -4,114 +4,114 @@ void UpdateDisplay(){
 	int column;
 	int page;
 	int number;
-
-	
-	for (slot=1; slot<=16; slot++){                  
-		number = front(DisplayQueue);              // pulls value from queue and dequeues to next item in queue     
-		dequeue(DisplayQueue); 
-		switch(slot){                              // switch cases set column and page to correct bit on the display
-			case '1' : 
-				column = 3;
-				page = 0;
-				break;
-			case '2' : 
-				column = 27;
-				page = 0;
-				break;
-			case '3' : 
-				column = 51;
-				page = 0;
-				break;
-			case '4' : 
-				column = 75;
-				page = 0;
-				break;
-			case '5' : 
-				column = 3;
-				page = 2;
-				break;
-			case '6' : 
-				column = 27;
-				page = 2;
-				break;
-			case '7' : 
-				column = 51;
-				page = 2;
-				break;
-			case '8' : 
-				column = 75;
-				page = 2;
-				break;
-			case '9' : 
-				column = 3;
-				page = 4;
-				break;
-			case '10' : 
-				column = 27;
-				page = 4;
-				break;
-			case '11' : 
-				column = 51;
-				page = 4;
-				break;
-			case '12' : 
-				column = 75;
-				page = 4;
-				break;
-			case '13' : 
-				column = 3;
-				page = 6;
-				break;
-			case '14' : 
-				column = 27;
-				page = 6;
-				break;
-			case '15' : 
-				column = 51;
-				page = 6;
-				break;
-			case '16' : 
-				column = 75;
-				page = 6;
-				break;
-			default : 
-				column =1;
-				page =1;
-				break;
-		}	
+	if(isEmpty(DisplayQueue)){}        // ends the fuction if there are no values to display
+	else{
+		for (slot=1; slot<=16; slot++){                  
+			number = front(DisplayQueue);              // pulls value from queue and dequeues to next item in queue     
+			dequeue(DisplayQueue); 
+			switch(slot){                              // switch cases set column and page to correct bit on the display
+				case '1' : 
+					column = 3;
+					page = 0;
+					break;
+				case '2' : 
+					column = 27;
+					page = 0;
+					break;
+				case '3' : 
+					column = 51;
+					page = 0;
+					break;
+				case '4' : 
+					column = 75;
+					page = 0;
+					break;
+				case '5' : 
+					column = 3;
+					page = 2;
+					break;
+				case '6' : 
+					column = 27;
+					page = 2;
+					break;
+				case '7' : 
+					column = 51;
+					page = 2;
+					break;
+				case '8' : 
+					column = 75;
+					page = 2;
+					break;
+				case '9' : 
+					column = 3;
+					page = 4;
+					break;
+				case '10' : 
+					column = 27;
+					page = 4;
+					break;
+				case '11' : 
+					column = 51;
+					page = 4;
+					break;
+				case '12' : 
+					column = 75;
+					page = 4;
+					break;
+				case '13' : 
+					column = 3;
+					page = 6;
+					break;
+				case '14' : 
+					column = 27;
+					page = 6;
+					break;
+				case '15' : 
+					column = 51;
+					page = 6;
+					break;
+				case '16' : 
+					column = 75;
+					page = 6;
+					break;
+				default : 
+					column =1;
+					page =1;
+					break;
+			}	
 		
-		switch(number){                                            // Checks number from Queue and calls print to display based on number
-			case '0' : printnull(column,page);
-				break;
-			case '2' : print2(column,page);
-				break;
-			case '4' : print4(column,page);
-				break;
-			case '8' : print8(column,page);
-				break;
-			case '16' : print16(column,page);
-				break;
-			case '32' : print32(column,page);
-				break;
-			case '64' : print64(column,page);
-				break;
-			case '128' : print128(column,page);
-				break;
-			case '256' : print256(column,page);
-				break;
-			case '512' : print512(column,page);
-				break;
-			case '1024' : print1024(column,page);
-				break;
-			case '2048' : printwin();
-				break;
-			default: printnull(column,page);
-				break;
-		
-		
+			switch(number){                                            // Checks number from Queue and calls print to display based on number
+				case '0' : printnull(column,page);
+					break;
+				case '2' : print2(column,page);
+					break;
+				case '4' : print4(column,page);
+					break;
+				case '8' : print8(column,page);
+					break;
+				case '16' : print16(column,page);
+					break;
+				case '32' : print32(column,page);
+					break;
+				case '64' : print64(column,page);
+					break;
+				case '128' : print128(column,page);
+					break;
+				case '256' : print256(column,page);
+					break;
+				case '512' : print512(column,page);
+					break;
+				case '1024' : print1024(column,page);
+					break;
+				case '2048' : printwin();
+					break;
+				case '99' : printlose();
+					break;
+				default: printnull(column,page);
+					break;
+			}
+		}
 	}
-		
-	
 }
 
 // Anchor Bits
@@ -1438,4 +1438,94 @@ void printwin()
 	dis_cmd_1(0x91); 
 	setColumn(x+18);
 	dis_cmd_1(0x6E); //
-}	
+}
+	
+void printlose()
+{
+	turn_off_all();
+	int x = 42;
+	int y = 3;
+	
+	setPage(y); 
+
+	setColumn(x);
+	dis_cmd_1(0x00); //
+	setColumn(x+1);
+	dis_cmd_1(0xC0); 
+	setColumn(x+2);
+	dis_cmd_1(0x20);
+	setColumn(x+3);
+	dis_cmd_1(0x1E);      // Y
+	setColumn(x+4);
+	dis_cmd_1(0x20); 
+	setColumn(x+5);
+	dis_cmd_1(0xC0); //
+	setColumn(x+6);
+	dis_cmd_1(0x00); //     
+	setColumn(x+7);
+	dis_cmd_1(0x7E);
+	setColumn(x+8);
+	dis_cmd_1(0x82);      // O
+	setColumn(x+9);
+	dis_cmd_1(0x82); 
+	setColumn(x+10);
+	dis_cmd_1(0x82); 
+	setColumn(x+11);
+	dis_cmd_1(0x7E); //       
+	setColumn(x+12);
+	dis_cmd_1(0x00); //
+	setColumn(x+13);
+	dis_cmd_1(0xFE); 
+	setColumn(x+14);
+	dis_cmd_1(0x02);   // Top U
+	setColumn(x+15);
+	dis_cmd_1(0x02);
+	setColumn(x+16);
+	dis_cmd_1(0x02); 
+	setColumn(x+17);
+	dis_cmd_1(0xFE); //
+	setColumn(x+18);
+	dis_cmd_1(0x00); 
+	
+	setPage(y+1); 
+
+	setColumn(x);    //
+	dis_cmd_1(0x7F); 
+	setColumn(x+1);
+	dis_cmd_1(0x01); 
+	setColumn(x+2);         // L
+	dis_cmd_1(0x01);
+	setColumn(x+3);
+	dis_cmd_1(0x01); //     
+	setColumn(x+4);
+	dis_cmd_1(0x00); //
+	setColumn(x+5);
+	dis_cmd_1(0x3E); 
+	setColumn(x+6);
+	dis_cmd_1(0x41);     // O
+	setColumn(x+7);
+	dis_cmd_1(0x41);
+	setColumn(x+8);
+	dis_cmd_1(0x3E); //
+	setColumn(x+9);
+	dis_cmd_1(0x00); // 
+	setColumn(x+10);
+	dis_cmd_1(0x31); 
+	setColumn(x+11);
+	dis_cmd_1(0x49);      // S
+	setColumn(x+12);
+	dis_cmd_1(0x49); 
+	setColumn(x+13);
+	dis_cmd_1(0x46); //
+	setColumn(x+14);
+	dis_cmd_1(0x00); //
+	setColumn(x+15);
+	dis_cmd_1(0x7F);
+	setColumn(x+16);
+	dis_cmd_1(0x49); 
+	setColumn(x+17);
+	dis_cmd_1(0x49); 
+	setColumn(x+18);
+	dis_cmd_1(0x41); //
+	
+}
