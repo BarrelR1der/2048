@@ -55,7 +55,7 @@ void SpawnRandom2(void)
 		
 	}
    int Length = sizeof(TileArray2)/sizeof(TA[0]);
-	int random_number= rand() % Length+1;
+	int random_number= rand() % Length;
 	TA[TileArray2[random_number]]=2;
 
 
