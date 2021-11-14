@@ -196,49 +196,49 @@ void printnull(int x, uint32_t y) // prints empty tile
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+5);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+6);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+7);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+8);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+9);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+10);               // print nothing
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+11);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+12);  
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+13);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+14); 
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+15);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+16);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+17);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+18);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -247,49 +247,49 @@ void printnull(int x, uint32_t y) // prints empty tile
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+5);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+6);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+7);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+8);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+9);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+10);        //print nothing
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+11);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+12);      
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+13);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+14); 
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+15);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+16);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+17);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+18);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }
@@ -301,49 +301,49 @@ void print2(int x, uint32_t y)  //prints a 2 to the tile
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+5);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+6);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+7);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+8);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+9);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+10);
-	dis_cmd_1(0x84);
+	dis_cmd_1(0x12);
 	setColumn(x+11);
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+12);      // top 2 
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+13);
-	dis_cmd_1(0x87);
+	dis_cmd_1(0x1E);
 	setColumn(x+14); //
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+15);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+16);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+17);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+18);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -352,49 +352,49 @@ void print2(int x, uint32_t y)  //prints a 2 to the tile
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+5);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+6);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+7);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+8);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+9);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+10);
-	dis_cmd_1(0x31);
+	dis_cmd_1(0xC8);
 	setColumn(x+11);
-	dis_cmd_1(0x51);
+	dis_cmd_1(0xA8);
 	setColumn(x+12);       // bot 2
-	dis_cmd_1(0x91);
+	dis_cmd_1(0x98);
 	setColumn(x+13);
-	dis_cmd_1(0x11);
+	dis_cmd_1(0x88);
 	setColumn(x+14); //
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+15);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+16);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+17);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+18);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }	
@@ -406,49 +406,49 @@ void print4(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+5);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+6);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+7);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+8);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+9);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+10);
-	dis_cmd_1(0x8F);
+	dis_cmd_1(0x1F);
 	setColumn(x+11);
-	dis_cmd_1(0x81);        //top 4
+	dis_cmd_1(0x18);        //top 4
 	setColumn(x+12);
-	dis_cmd_1(0x81);
+	dis_cmd_1(0x18);
 	setColumn(x+13);
-	dis_cmd_1(0x8F);
+	dis_cmd_1(0x1F);
 	setColumn(x+14); // 
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+15);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+16);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+17);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+18);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -457,49 +457,49 @@ void print4(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+5);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+6);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+7);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+8);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+9);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+10);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+11);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+12);      // bot 4
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+13);
-	dis_cmd_1(0xF1);
+	dis_cmd_1(0xF8);
 	setColumn(x+14); //
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+15);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+16);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+17);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+18);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }		
@@ -511,49 +511,49 @@ void print8(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+5);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+6);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+7);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+8);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+9);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+10);
-	dis_cmd_1(0x86);
+	dis_cmd_1(0x16);
 	setColumn(x+11);
-	dis_cmd_1(0x89);        //top 8
+	dis_cmd_1(0x19);        //top 8
 	setColumn(x+12);
-	dis_cmd_1(0x89);
+	dis_cmd_1(0x19);
 	setColumn(x+13);
-	dis_cmd_1(0x86);
+	dis_cmd_1(0x16);
 	setColumn(x+14); // 
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+15);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+16);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+17);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+18);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -562,49 +562,49 @@ void print8(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+5);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+6);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+7);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+8);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+9);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+10);
-	dis_cmd_1(0xE1);
+	dis_cmd_1(0x78);
 	setColumn(x+11);
-	dis_cmd_1(0x11);
+	dis_cmd_1(0x88);
 	setColumn(x+12);            //bot 8
-	dis_cmd_1(0x11);
+	dis_cmd_1(0x88);
 	setColumn(x+13);
-	dis_cmd_1(0xE1);
+	dis_cmd_1(0x78);
 	setColumn(x+14); //
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+15);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+16);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+17);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+18);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }		
@@ -616,49 +616,49 @@ void print16(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+5);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+6);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+7);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+8);
-	dis_cmd_1(0x84);     // Top 1
+	dis_cmd_1(0x12);     // Top 1
 	setColumn(x+9);
-	dis_cmd_1(0x8F); 
+	dis_cmd_1(0x1F); 
 	setColumn(x+10);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+11);
-	dis_cmd_1(0x80);        
+	dis_cmd_1(0x10);        
 	setColumn(x+12);
-	dis_cmd_1(0x80);//
+	dis_cmd_1(0x10);//
 	setColumn(x+13);
-	dis_cmd_1(0x83);
+	dis_cmd_1(0x1C);
 	setColumn(x+14);
-	dis_cmd_1(0x84);      // Top 6
+	dis_cmd_1(0x12);      // Top 6
 	setColumn(x+15);
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+16);
-	dis_cmd_1(0x80);//
+	dis_cmd_1(0x10);//
 	setColumn(x+17);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+18);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -667,49 +667,49 @@ void print16(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+5);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+6);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+7);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+8);
-	dis_cmd_1(0x01);     // Bottom 1
+	dis_cmd_1(0x08);     // Bottom 1
 	setColumn(x+9);
-	dis_cmd_1(0xF1); 
+	dis_cmd_1(0xF8); 
 	setColumn(x+10);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+11);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+12);            
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+13);
-	dis_cmd_1(0xE1);
+	dis_cmd_1(0x78);
 	setColumn(x+14); 
-	dis_cmd_1(0x91);      // Bottom 6
+	dis_cmd_1(0x98);      // Bottom 6
 	setColumn(x+15);
-	dis_cmd_1(0x91);
+	dis_cmd_1(0x98);
 	setColumn(x+16);
-	dis_cmd_1(0x61); // 
+	dis_cmd_1(0x68); // 
 	setColumn(x+17);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+18);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }	
@@ -722,49 +722,49 @@ void print32(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+5);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+6);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+7);
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+8);
-	dis_cmd_1(0x89);     // Top 3
+	dis_cmd_1(0x19);     // Top 3
 	setColumn(x+9);
-	dis_cmd_1(0x89); 
+	dis_cmd_1(0x19); 
 	setColumn(x+10);
-	dis_cmd_1(0x86); //
+	dis_cmd_1(0x16); //
 	setColumn(x+11);
-	dis_cmd_1(0x80);        
+	dis_cmd_1(0x10);        
 	setColumn(x+12);
-	dis_cmd_1(0x80);//
+	dis_cmd_1(0x10);//
 	setColumn(x+13);
-	dis_cmd_1(0x84);
+	dis_cmd_1(0x12);
 	setColumn(x+14);
-	dis_cmd_1(0x88);      // Top 2
+	dis_cmd_1(0x11);      // Top 2
 	setColumn(x+15);
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+16);
-	dis_cmd_1(0x87);//
+	dis_cmd_1(0x1E);//
 	setColumn(x+17);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+18);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -773,49 +773,49 @@ void print32(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+5);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+6);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+7);
-	dis_cmd_1(0x11);
+	dis_cmd_1(0x88);
 	setColumn(x+8);
-	dis_cmd_1(0x11);     // Bottom 3
+	dis_cmd_1(0x88);     // Bottom 3
 	setColumn(x+9);
-	dis_cmd_1(0x11); 
+	dis_cmd_1(0x88); 
 	setColumn(x+10);
-	dis_cmd_1(0xE1); //
+	dis_cmd_1(0x78); //
 	setColumn(x+11);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+12);            
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+13);
-	dis_cmd_1(0x31);
+	dis_cmd_1(0xC8);
 	setColumn(x+14); 
-	dis_cmd_1(0x51);      // Bottom 2
+	dis_cmd_1(0xA8);      // Bottom 2
 	setColumn(x+15);
-	dis_cmd_1(0x91);
+	dis_cmd_1(0x98);
 	setColumn(x+16);
-	dis_cmd_1(0x11); // 
+	dis_cmd_1(0x88); // 
 	setColumn(x+17);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+18);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }	
@@ -827,49 +827,49 @@ void print64(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+5);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+6);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+7);
-	dis_cmd_1(0x83);
+	dis_cmd_1(0x1C);
 	setColumn(x+8);
-	dis_cmd_1(0x84);     // Top 6
+	dis_cmd_1(0x12);     // Top 6
 	setColumn(x+9);
-	dis_cmd_1(0x88); 
+	dis_cmd_1(0x11); 
 	setColumn(x+10);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+11);
-	dis_cmd_1(0x80);        
+	dis_cmd_1(0x10);        
 	setColumn(x+12);
-	dis_cmd_1(0x80);//
+	dis_cmd_1(0x10);//
 	setColumn(x+13);
-	dis_cmd_1(0x8F);
+	dis_cmd_1(0x1F);
 	setColumn(x+14);
-	dis_cmd_1(0x81);      // Top 4
+	dis_cmd_1(0x18);      // Top 4
 	setColumn(x+15);
-	dis_cmd_1(0x81);
+	dis_cmd_1(0x18);
 	setColumn(x+16);
-	dis_cmd_1(0x8F);//
+	dis_cmd_1(0x1F);//
 	setColumn(x+17);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+18);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -878,49 +878,49 @@ void print64(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+5);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+6);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+7);
-	dis_cmd_1(0xE1);
+	dis_cmd_1(0x78);
 	setColumn(x+8);
-	dis_cmd_1(0x91);     // Bottom 6
+	dis_cmd_1(0x98);     // Bottom 6
 	setColumn(x+9);
-	dis_cmd_1(0x91); 
+	dis_cmd_1(0x98); 
 	setColumn(x+10);
-	dis_cmd_1(0x61); //
+	dis_cmd_1(0x68); //
 	setColumn(x+11);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+12);            
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+13);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+14); 
-	dis_cmd_1(0x01);      // Bottom 4
+	dis_cmd_1(0x08);      // Bottom 4
 	setColumn(x+15);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+16);
-	dis_cmd_1(0xF1); // 
+	dis_cmd_1(0xF8); // 
 	setColumn(x+17);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+18);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }		
@@ -933,49 +933,49 @@ void print128(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+5);
-	dis_cmd_1(0x80);  
+	dis_cmd_1(0x10);  
 	setColumn(x+6);
-	dis_cmd_1(0x84);      // Top 1
+	dis_cmd_1(0x12);      // Top 1
 	setColumn(x+7);
-	dis_cmd_1(0x8F);
+	dis_cmd_1(0x1F);
 	setColumn(x+8);
-	dis_cmd_1(0x80); //    
+	dis_cmd_1(0x10); //    
 	setColumn(x+9);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+10);
-	dis_cmd_1(0x84); 
+	dis_cmd_1(0x12); 
 	setColumn(x+11);
-	dis_cmd_1(0x88);        // Top 2
+	dis_cmd_1(0x11);        // Top 2
 	setColumn(x+12);
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+13);
-	dis_cmd_1(0x87); //
+	dis_cmd_1(0x1E); //
 	setColumn(x+14);
-	dis_cmd_1(0x80); //     
+	dis_cmd_1(0x10); //     
 	setColumn(x+15);
-	dis_cmd_1(0x86);
+	dis_cmd_1(0x16);
 	setColumn(x+16);
-	dis_cmd_1(0x89);         // Top 8
+	dis_cmd_1(0x19);         // Top 8
 	setColumn(x+17);
-	dis_cmd_1(0x89);
+	dis_cmd_1(0x19);
 	setColumn(x+18);
-	dis_cmd_1(0x86); //
+	dis_cmd_1(0x16); //
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -984,49 +984,49 @@ void print128(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+5);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+6);
-	dis_cmd_1(0x01);       // Bot 1
+	dis_cmd_1(0x08);       // Bot 1
 	setColumn(x+7);
-	dis_cmd_1(0xF1);
+	dis_cmd_1(0xF8);
 	setColumn(x+8);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+9);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+10);
-	dis_cmd_1(0x31); 
+	dis_cmd_1(0xC8); 
 	setColumn(x+11); 
-	dis_cmd_1(0x51);         // Bot 2
+	dis_cmd_1(0xA8);         // Bot 2
 	setColumn(x+12);            
-	dis_cmd_1(0x91); 
+	dis_cmd_1(0x98); 
 	setColumn(x+13);
-	dis_cmd_1(0x11); //
+	dis_cmd_1(0x88); //
 	setColumn(x+14); 
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+15);
-	dis_cmd_1(0xE1);
+	dis_cmd_1(0x78);
 	setColumn(x+16);
-	dis_cmd_1(0x11);          // Bot 8
+	dis_cmd_1(0x88);          // Bot 8
 	setColumn(x+17);
-	dis_cmd_1(0x11);
+	dis_cmd_1(0x88);
 	setColumn(x+18);
-	dis_cmd_1(0xE1); //
+	dis_cmd_1(0x78); //
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }	
@@ -1038,49 +1038,49 @@ void print256(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+5);
-	dis_cmd_1(0x84);  
+	dis_cmd_1(0x12);  
 	setColumn(x+6);
-	dis_cmd_1(0x88);      // Top 2
+	dis_cmd_1(0x11);      // Top 2
 	setColumn(x+7);
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+8);
-	dis_cmd_1(0x87); //    
+	dis_cmd_1(0x1E); //    
 	setColumn(x+9);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+10);
-	dis_cmd_1(0x8F); 
+	dis_cmd_1(0x1F); 
 	setColumn(x+11);
-	dis_cmd_1(0x89);        // Top 5
+	dis_cmd_1(0x19);        // Top 5
 	setColumn(x+12);
-	dis_cmd_1(0x89);
+	dis_cmd_1(0x19);
 	setColumn(x+13);
-	dis_cmd_1(0x88); //
+	dis_cmd_1(0x11); //
 	setColumn(x+14);
-	dis_cmd_1(0x80); //     
+	dis_cmd_1(0x10); //     
 	setColumn(x+15);
-	dis_cmd_1(0x83);
+	dis_cmd_1(0x1C);
 	setColumn(x+16);
-	dis_cmd_1(0x84);         // Top 6
+	dis_cmd_1(0x12);         // Top 6
 	setColumn(x+17);
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+18);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -1089,49 +1089,49 @@ void print256(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+5);
-	dis_cmd_1(0x31);
+	dis_cmd_1(0xC8);
 	setColumn(x+6);
-	dis_cmd_1(0x51);       // Bot 2
+	dis_cmd_1(0xA8);       // Bot 2
 	setColumn(x+7);
-	dis_cmd_1(0x91);
+	dis_cmd_1(0x98);
 	setColumn(x+8);
-	dis_cmd_1(0x11); //
+	dis_cmd_1(0x88); //
 	setColumn(x+9);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+10);
-	dis_cmd_1(0x21); 
+	dis_cmd_1(0x48); 
 	setColumn(x+11); 
-	dis_cmd_1(0x11);         // Bot 5
+	dis_cmd_1(0x88);         // Bot 5
 	setColumn(x+12);            
-	dis_cmd_1(0x11); 
+	dis_cmd_1(0x88); 
 	setColumn(x+13);
-	dis_cmd_1(0xE1); //
+	dis_cmd_1(0x78); //
 	setColumn(x+14); 
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+15);
-	dis_cmd_1(0xE1);
+	dis_cmd_1(0x78);
 	setColumn(x+16);
-	dis_cmd_1(0x91);          // Bot 6
+	dis_cmd_1(0x8);          // Bot 6
 	setColumn(x+17);
-	dis_cmd_1(0x91);
+	dis_cmd_1(0x98);
 	setColumn(x+18);
-	dis_cmd_1(0x61); //
+	dis_cmd_1(0x68); //
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }	
@@ -1143,49 +1143,49 @@ void print512(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+4);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+5);
-	dis_cmd_1(0x8F);  
+	dis_cmd_1(0x1F);  
 	setColumn(x+6);
-	dis_cmd_1(0x89);      // Top 5
+	dis_cmd_1(0x19);      // Top 5
 	setColumn(x+7);
-	dis_cmd_1(0x89);
+	dis_cmd_1(0x19);
 	setColumn(x+8);
-	dis_cmd_1(0x88); //    
+	dis_cmd_1(0x11); //    
 	setColumn(x+9);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+10);
-	dis_cmd_1(0x80); 
+	dis_cmd_1(0x10); 
 	setColumn(x+11);
-	dis_cmd_1(0x84);        // Top 1
+	dis_cmd_1(0x12);        // Top 1
 	setColumn(x+12);
-	dis_cmd_1(0x8F);
+	dis_cmd_1(0x1F);
 	setColumn(x+13);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+14);
-	dis_cmd_1(0x80); //     
+	dis_cmd_1(0x10); //     
 	setColumn(x+15);
-	dis_cmd_1(0x84);
+	dis_cmd_1(0x12);
 	setColumn(x+16);
-	dis_cmd_1(0x88);         // Top 2
+	dis_cmd_1(0x11);         // Top 2
 	setColumn(x+17);
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+18);
-	dis_cmd_1(0x87); //
+	dis_cmd_1(0x1E); //
 	setColumn(x+19);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+20);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+21);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
@@ -1194,49 +1194,49 @@ void print512(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+4);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+5);
-	dis_cmd_1(0x21);
+	dis_cmd_1(0x48);
 	setColumn(x+6);
-	dis_cmd_1(0x11);       // Bot 5
+	dis_cmd_1(0x88);       // Bot 5
 	setColumn(x+7);
-	dis_cmd_1(0x11);
+	dis_cmd_1(0x88);
 	setColumn(x+8);
-	dis_cmd_1(0xE1); //
+	dis_cmd_1(0x78); //
 	setColumn(x+9);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+10);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+11); 
-	dis_cmd_1(0x01);         // Bot 1
+	dis_cmd_1(0x08);         // Bot 1
 	setColumn(x+12);            
-	dis_cmd_1(0xF1); 
+	dis_cmd_1(0xF8); 
 	setColumn(x+13);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+14); 
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+15);
-	dis_cmd_1(0x31);
+	dis_cmd_1(0xC8);
 	setColumn(x+16);
-	dis_cmd_1(0x51);          // Bot 2
+	dis_cmd_1(0xA8);          // Bot 2
 	setColumn(x+17);
-	dis_cmd_1(0x91);
+	dis_cmd_1(0x98);
 	setColumn(x+18);
-	dis_cmd_1(0x11); //
+	dis_cmd_1(0x88); //
 	setColumn(x+19);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }	
@@ -1249,100 +1249,100 @@ void print1024(int x, uint32_t y)
 	setColumn(x);
 	dis_cmd_1(0xFF); 
 	setColumn(x+1);
-	dis_cmd_1(0x80); // 
+	dis_cmd_1(0x10); // 
 	setColumn(x+2);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+3);
-	dis_cmd_1(0x84);      //Top 1
+	dis_cmd_1(0x12);      //Top 1
 	setColumn(x+4);
-	dis_cmd_1(0x8F); 
+	dis_cmd_1(0x1F); 
 	setColumn(x+5);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+6);
-	dis_cmd_1(0x80); //     
+	dis_cmd_1(0x10); //     
 	setColumn(x+7);
-	dis_cmd_1(0x87);
+	dis_cmd_1(0x1E);
 	setColumn(x+8);
-	dis_cmd_1(0x88);      //Top 0
+	dis_cmd_1(0x11);      //Top 0
 	setColumn(x+9);
-	dis_cmd_1(0x88); 
+	dis_cmd_1(0x11); 
 	setColumn(x+10);
-	dis_cmd_1(0x87); //
+	dis_cmd_1(0x1E); //
 	setColumn(x+11);
-	dis_cmd_1(0x80);        
+	dis_cmd_1(0x10);        
 	setColumn(x+12);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+13);
-	dis_cmd_1(0x84); 
+	dis_cmd_1(0x12); 
 	setColumn(x+14);
-	dis_cmd_1(0x88);   // Top 2
+	dis_cmd_1(0x11);   // Top 2
 	setColumn(x+15);
-	dis_cmd_1(0x88);
+	dis_cmd_1(0x11);
 	setColumn(x+16);
-	dis_cmd_1(0x87); //
+	dis_cmd_1(0x1E); //
 	setColumn(x+17);
-	dis_cmd_1(0x80); //
+	dis_cmd_1(0x10); //
 	setColumn(x+18);
-	dis_cmd_1(0x8F); 
+	dis_cmd_1(0x1F); 
 	setColumn(x+19);
-	dis_cmd_1(0x81);     // Top 4
+	dis_cmd_1(0x18);     // Top 4
 	setColumn(x+20);
-	dis_cmd_1(0x81);
+	dis_cmd_1(0x18);
 	setColumn(x+21);
-	dis_cmd_1(0x8F); //
+	dis_cmd_1(0x1F); //
 	setColumn(x+22);
-	dis_cmd_1(0x80);
+	dis_cmd_1(0x10);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 	
-	setPage(y-1);
+	setPage(y+1);
 	
 	setColumn(x);
 	dis_cmd_1(0xFF);
 	setColumn(x+1);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+2);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01);     // Bot 1
+	dis_cmd_1(0x08);     // Bot 1
 	setColumn(x+4);
-	dis_cmd_1(0xF1); 
+	dis_cmd_1(0xF8); 
 	setColumn(x+5);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+6);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+7);
-	dis_cmd_1(0xE1);
+	dis_cmd_1(0x78);
 	setColumn(x+8);
-	dis_cmd_1(0x11);      // Bot 0
+	dis_cmd_1(0x88);      // Bot 0
 	setColumn(x+9);
-	dis_cmd_1(0x11); 
+	dis_cmd_1(0x88); 
 	setColumn(x+10);
-	dis_cmd_1(0xE1); //
+	dis_cmd_1(0x78); //
 	setColumn(x+11); 
-	dis_cmd_1(0x01);         
+	dis_cmd_1(0x08);         
 	setColumn(x+12);            
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+13);
-	dis_cmd_1(0x31); 
+	dis_cmd_1(0xC8); 
 	setColumn(x+14); 
-	dis_cmd_1(0x51);      // Bot 2
+	dis_cmd_1(0xA8);      // Bot 2
 	setColumn(x+15);
-	dis_cmd_1(0x91);
+	dis_cmd_1(0x98);
 	setColumn(x+16);
-	dis_cmd_1(0x11); //   
+	dis_cmd_1(0x88); //   
 	setColumn(x+17);
-	dis_cmd_1(0x01); //
+	dis_cmd_1(0x08); //
 	setColumn(x+18);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+19);
-	dis_cmd_1(0x01);       // Bot 4
+	dis_cmd_1(0x08);       // Bot 4
 	setColumn(x+20);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+21);
-	dis_cmd_1(0xF1); //
+	dis_cmd_1(0xF8); //
 	setColumn(x+22);
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+23);
 	dis_cmd_1(0xFF);
 }
@@ -1358,39 +1358,39 @@ void printwin()
 	setColumn(x);
 	dis_cmd_1(0x00); //
 	setColumn(x+1);
-	dis_cmd_1(0xC0); 
+	dis_cmd_1(0x30); 
 	setColumn(x+2);
-	dis_cmd_1(0x20);
+	dis_cmd_1(0x40);
 	setColumn(x+3);
-	dis_cmd_1(0x1E);      // Y
+	dis_cmd_1(0x87);      // Y
 	setColumn(x+4);
-	dis_cmd_1(0x20); 
+	dis_cmd_1(0x40); 
 	setColumn(x+5);
-	dis_cmd_1(0xC0); //
+	dis_cmd_1(0x30); //
 	setColumn(x+6);
 	dis_cmd_1(0x00); //     
 	setColumn(x+7);
-	dis_cmd_1(0x7E);
+	dis_cmd_1(0xE7);
 	setColumn(x+8);
-	dis_cmd_1(0x82);      // O
+	dis_cmd_1(0x14);      // O
 	setColumn(x+9);
-	dis_cmd_1(0x82); 
+	dis_cmd_1(0x14); 
 	setColumn(x+10);
-	dis_cmd_1(0x82); 
+	dis_cmd_1(0x14); 
 	setColumn(x+11);
-	dis_cmd_1(0x7E); //       
+	dis_cmd_1(0xE7); //       
 	setColumn(x+12);
 	dis_cmd_1(0x00); //
 	setColumn(x+13);
-	dis_cmd_1(0xFE); 
+	dis_cmd_1(0xF7); 
 	setColumn(x+14);
-	dis_cmd_1(0x02);   // Top U
+	dis_cmd_1(0x04);   // Top U
 	setColumn(x+15);
-	dis_cmd_1(0x02);
+	dis_cmd_1(0x04);
 	setColumn(x+16);
-	dis_cmd_1(0x02); 
+	dis_cmd_1(0x04); 
 	setColumn(x+17);
-	dis_cmd_1(0xFE); //
+	dis_cmd_1(0xF7); //
 	setColumn(x+18);
 	dis_cmd_1(0x00); 
 	
@@ -1399,82 +1399,82 @@ void printwin()
 	setColumn(x);
 	dis_cmd_1(0x00); //
 	setColumn(x+1);
-	dis_cmd_1(0xFC); 
+	dis_cmd_1(0xF3); 
 	setColumn(x+2);
-	dis_cmd_1(0x02);
+	dis_cmd_1(0x04);
 	setColumn(x+3);
-	dis_cmd_1(0x0C);      // W
+	dis_cmd_1(0x03);      // W
 	setColumn(x+4);
-	dis_cmd_1(0x02); 
+	dis_cmd_1(0x04); 
 	setColumn(x+5);
-	dis_cmd_1(0x0C); //
+	dis_cmd_1(0x03); //
 	setColumn(x+6);
 	dis_cmd_1(0x00); //     
 	setColumn(x+7);
 	dis_cmd_1(0x00);
 	setColumn(x+8);
-	dis_cmd_1(0x82);      // I
+	dis_cmd_1(0x14);      // I
 	setColumn(x+9);
-	dis_cmd_1(0xFE); 
+	dis_cmd_1(0xF7); 
 	setColumn(x+10);
-	dis_cmd_1(0x82); 
+	dis_cmd_1(0x14); 
 	setColumn(x+11);
 	dis_cmd_1(0x00); //       
 	setColumn(x+12);
 	dis_cmd_1(0x00); //
 	setColumn(x+13);
-	dis_cmd_1(0xFE); 
+	dis_cmd_1(0xF7); 
 	setColumn(x+14);
-	dis_cmd_1(0x02);   // N
+	dis_cmd_1(0x04);   // N
 	setColumn(x+15);
-	dis_cmd_1(0x02);
+	dis_cmd_1(0x04);
 	setColumn(x+16);
-	dis_cmd_1(0x02); 
+	dis_cmd_1(0x04); 
 	setColumn(x+17);
-	dis_cmd_1(0xFE); //
+	dis_cmd_1(0xF7); //
 	setColumn(x+18);
 	dis_cmd_1(0x00); 
 	
 	setPage(y+2); 
 
 	setColumn(x);    //
-	dis_cmd_1(0x43); 
+	dis_cmd_1(0x2C); 
 	setColumn(x+1);
-	dis_cmd_1(0x85); 
+	dis_cmd_1(0x1A); 
 	setColumn(x+2);           // 2
-	dis_cmd_1(0x89);
+	dis_cmd_1(0x19);
 	setColumn(x+3);
-	dis_cmd_1(0x71); //     
+	dis_cmd_1(0xE8); //     
 	setColumn(x+4);
 	dis_cmd_1(0x00); //
 	setColumn(x+5);
-	dis_cmd_1(0x7E);
+	dis_cmd_1(0xE7);
 	setColumn(x+6);
-	dis_cmd_1(0x81);          // 0
+	dis_cmd_1(0x18);          // 0
 	setColumn(x+7);
-	dis_cmd_1(0x81);
+	dis_cmd_1(0x18);
 	setColumn(x+8);
-	dis_cmd_1(0x7E); //     
+	dis_cmd_1(0xE7); //     
 	setColumn(x+9);
 	dis_cmd_1(0x00); //
 	setColumn(x+10);
 	dis_cmd_1(0xF0); 
 	setColumn(x+11);
-	dis_cmd_1(0x10);       // 4 
+	dis_cmd_1(0x80);       // 4 
 	setColumn(x+12);
-	dis_cmd_1(0x10); 
+	dis_cmd_1(0x80); 
 	setColumn(x+13);
 	dis_cmd_1(0xFF); //
 	setColumn(x+14);
 	dis_cmd_1(0x00); //
 	setColumn(x+15);
-	dis_cmd_1(0x6E);
+	dis_cmd_1(0x67);
 	setColumn(x+16);
-	dis_cmd_1(0x91);        // 8
+	dis_cmd_1(0x98);        // 8
 	setColumn(x+17);
-	dis_cmd_1(0x91); 
+	dis_cmd_1(0x98); 
 	setColumn(x+18);
-	dis_cmd_1(0x6E); //
+	dis_cmd_1(0x67); //
 }
 	
 void printlose()
@@ -1488,81 +1488,81 @@ void printlose()
 	setColumn(x);
 	dis_cmd_1(0x00); //
 	setColumn(x+1);
-	dis_cmd_1(0xC0); 
+	dis_cmd_1(0x30); 
 	setColumn(x+2);
-	dis_cmd_1(0x20);
+	dis_cmd_1(0x40);
 	setColumn(x+3);
-	dis_cmd_1(0x1E);      // Y
+	dis_cmd_1(0x87);      // Y
 	setColumn(x+4);
-	dis_cmd_1(0x20); 
+	dis_cmd_1(0x40); 
 	setColumn(x+5);
-	dis_cmd_1(0xC0); //
+	dis_cmd_1(0x30); //
 	setColumn(x+6);
 	dis_cmd_1(0x00); //     
 	setColumn(x+7);
-	dis_cmd_1(0x7E);
+	dis_cmd_1(0xE7);
 	setColumn(x+8);
-	dis_cmd_1(0x82);      // O
+	dis_cmd_1(0x14);      // O
 	setColumn(x+9);
-	dis_cmd_1(0x82); 
+	dis_cmd_1(0x14); 
 	setColumn(x+10);
-	dis_cmd_1(0x82); 
+	dis_cmd_1(0x14); 
 	setColumn(x+11);
-	dis_cmd_1(0x7E); //       
+	dis_cmd_1(0xE7); //       
 	setColumn(x+12);
 	dis_cmd_1(0x00); //
 	setColumn(x+13);
-	dis_cmd_1(0xFE); 
+	dis_cmd_1(0xF7); 
 	setColumn(x+14);
-	dis_cmd_1(0x02);   // Top U
+	dis_cmd_1(0x04);   // U
 	setColumn(x+15);
-	dis_cmd_1(0x02);
+	dis_cmd_1(0x04);
 	setColumn(x+16);
-	dis_cmd_1(0x02); 
+	dis_cmd_1(0x04); 
 	setColumn(x+17);
-	dis_cmd_1(0xFE); //
+	dis_cmd_1(0xF7); //
 	setColumn(x+18);
 	dis_cmd_1(0x00); 
 	
 	setPage(y+1); 
 
 	setColumn(x);    //
-	dis_cmd_1(0x7F); 
+	dis_cmd_1(0xEF); 
 	setColumn(x+1);
-	dis_cmd_1(0x01); 
+	dis_cmd_1(0x08); 
 	setColumn(x+2);         // L
-	dis_cmd_1(0x01);
+	dis_cmd_1(0x08);
 	setColumn(x+3);
-	dis_cmd_1(0x01); //     
+	dis_cmd_1(0x08); //     
 	setColumn(x+4);
 	dis_cmd_1(0x00); //
 	setColumn(x+5);
-	dis_cmd_1(0x3E); 
+	dis_cmd_1(0xC7); 
 	setColumn(x+6);
-	dis_cmd_1(0x41);     // O
+	dis_cmd_1(0x28);     // O
 	setColumn(x+7);
-	dis_cmd_1(0x41);
+	dis_cmd_1(0x28);
 	setColumn(x+8);
-	dis_cmd_1(0x3E); //
+	dis_cmd_1(0xC7); //
 	setColumn(x+9);
 	dis_cmd_1(0x00); // 
 	setColumn(x+10);
-	dis_cmd_1(0x31); 
+	dis_cmd_1(0xC8); 
 	setColumn(x+11);
-	dis_cmd_1(0x49);      // S
+	dis_cmd_1(0x29);      // S
 	setColumn(x+12);
-	dis_cmd_1(0x49); 
+	dis_cmd_1(0x29); 
 	setColumn(x+13);
-	dis_cmd_1(0x46); //
+	dis_cmd_1(0x26); //
 	setColumn(x+14);
 	dis_cmd_1(0x00); //
 	setColumn(x+15);
-	dis_cmd_1(0x7F);
+	dis_cmd_1(0xEF);
 	setColumn(x+16);
-	dis_cmd_1(0x49); 
+	dis_cmd_1(0x29); 
 	setColumn(x+17);
-	dis_cmd_1(0x49); 
+	dis_cmd_1(0x29); 
 	setColumn(x+18);
-	dis_cmd_1(0x41); //
+	dis_cmd_1(0x28); //
 	
 }
