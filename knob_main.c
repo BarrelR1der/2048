@@ -17,11 +17,11 @@ extern struct Queue* ButtonQueue;
 
 
 static struct btn_struct btn_a = {.mask_for_btn= 0<<8, 
-                                      .pin_ptr = &(GPIOA->IDR),
+                                      .pin_ptr = &(GPIOB->IDR),
                                       .state = UP};  
 				
 		    static struct btn_struct btn_b = {.mask_for_btn= 0<<9, 
-                                      .pin_ptr = &(GPIOA->IDR),
+                                      .pin_ptr = &(GPIOB->IDR),
                                       .state = UP};  
 				
 				static struct btn_struct btn_c = {.mask_for_btn= 0<<2, 
