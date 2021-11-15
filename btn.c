@@ -46,7 +46,7 @@ enum btn_edge update_btn(struct btn_struct *pb)
         break;
         default:  
              pb->state = UP; // 
-			 e = INACTIVE;
+						 e = INACTIVE;
              assert(0 && "Unhandled special enum constant!"); 
     }
 	return e;

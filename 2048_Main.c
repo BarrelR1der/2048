@@ -17,7 +17,7 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <time.h>
 
 
 
@@ -33,6 +33,7 @@ void turn_off_all(void);
 extern void UpdateKnobs(void);
 extern void UpdateArray(void);
 extern void UpdateDisplay(void);
+extern void init_knobs();
 
 
 struct Queue {
@@ -160,6 +161,7 @@ void init_gpio(void)
 {
 	// turning on the clk A
 	RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
+	RCC->IOPENR |= RCC_IOPENR_GPIOBEN;
 	
 	
 	// PA4, setting the select line as an output
@@ -201,16 +203,18 @@ void init_gpio(void)
     	GPIOB->MODER |= 0 << GPIO_MODER_MODE9_Pos; // PB9 Digital INPUT
     	GPIOB->PUPDR &= ~GPIO_PUPDR_PUPD9_Msk;
     	GPIOB->PUPDR |= 0x01 << GPIO_PUPDR_PUPD9_Pos; // Pull-up engaged
+			
+			GPIOB->MODER &= ~GPIO_MODER_MODE4_Msk;
+			GPIOB->MODER |= 0 << GPIO_MODER_MODE4_Pos; // PB4 Digital INPUT
+			GPIOB->PUPDR &= ~GPIO_PUPDR_PUPD4_Msk;
+			GPIOB->PUPDR |= 0x01 << GPIO_PUPDR_PUPD4_Pos; // Pull-up engaged
 	
-	GPIOA->MODER &= ~GPIO_MODER_MODE2_Msk;
-    	GPIOA->MODER |= 0 << GPIO_MODER_MODE2_Pos; // PA2 Digital INPUT
-    	GPIOA->PUPDR &= ~GPIO_PUPDR_PUPD2_Msk;
-    	GPIOA->PUPDR |= 0x01 << GPIO_PUPDR_PUPD2_Pos; // Pull-up engaged
+			GPIOB->MODER &= ~GPIO_MODER_MODE5_Msk;
+			GPIOB->MODER |= 0 << GPIO_MODER_MODE5_Pos; // PB5 Digital INPUT
+			GPIOB->PUPDR &= ~GPIO_PUPDR_PUPD5_Msk;
+			GPIOB->PUPDR |= 0x01 << GPIO_PUPDR_PUPD5_Pos; // Pull-up engaged
 	
-	GPIOA->MODER &= ~GPIO_MODER_MODE3_Msk;
-    	GPIOA->MODER |= 0 << GPIO_MODER_MODE3_Pos; // PA3 Digital INPUT
-    	GPIOA->PUPDR &= ~GPIO_PUPDR_PUPD3_Msk;
-    	GPIOA->PUPDR |= 0x01 << GPIO_PUPDR_PUPD3_Pos; // Pull-up engaged
+
 }
 
 void init_spi(void)
@@ -273,6 +277,7 @@ void turn_off_all(void)
 struct Queue* ButtonQueue;
 struct Queue* DisplayQueue;
 
+int junk;
 
 int main(void)
 
@@ -287,9 +292,19 @@ int main(void)
 	// display
 	init_display();
 	//GPOIA->ODR |= 1 << 0;
+	init_knobs();
+	
+	
+	junk++;
+	
+	srand(1);
+	junk--;
 	
 	turn_off_all();
-	print1024(0,1);
+	
+	UpdateArray();
+	UpdateDisplay();
+	//print512(3,0);
 	while(1)
 	{
 		UpdateKnobs();

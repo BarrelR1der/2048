@@ -17,18 +17,18 @@ extern struct Queue* ButtonQueue;
 
 
 static struct btn_struct btn_a = {.mask_for_btn= 0<<8, 
-                                      .pin_ptr = &(GPIOB->IDR),
+                                      .pin_ptr = &(GPIOA->IDR),
                                       .state = UP};  
 				
 		    static struct btn_struct btn_b = {.mask_for_btn= 0<<9, 
-                                      .pin_ptr = &(GPIOB->IDR),
+                                      .pin_ptr = &(GPIOA->IDR),
                                       .state = UP};  
 				
-				static struct btn_struct btn_c = {.mask_for_btn= 0<<2, 
+				static struct btn_struct btn_c = {.mask_for_btn= 0<<4, 
                                       .pin_ptr = &(GPIOA->IDR),
                                       .state = UP};  	
 				
-				static struct btn_struct btn_d = {.mask_for_btn= 0<<3, 
+				static struct btn_struct btn_d = {.mask_for_btn= 0<<5, 
                                       .pin_ptr = &(GPIOA->IDR),
                                       .state = UP};  
 																			
@@ -43,8 +43,8 @@ void init_knobs()
 									  
     init_btn(1 << 8, &(GPIOB->IDR), &btn_a); // Init state machine for PB8
 		init_btn(1 << 9, &(GPIOB->IDR), &btn_b); // Init state machine for PB9
-		init_btn(1 << 2, &(GPIOA->IDR), &btn_c); // Init state machine for PA2
-		init_btn(1 << 3, &(GPIOA->IDR), &btn_d); // Init state machine for PA3			
+		init_btn(1 << 4, &(GPIOB->IDR), &btn_c); // Init state machine for PA2
+		init_btn(1 << 5, &(GPIOB->IDR), &btn_d); // Init state machine for PA3			
 }
 
     
@@ -53,28 +53,28 @@ void UpdateKnobs(){
 		eb = update_btn(&btn_b);
 		ec = update_btn(&btn_c);
 		ed = update_btn(&btn_d);
-	  //print4(0,0);
-		//Send a 1 to the queue for right movement
+	  //print64(27,0);
+		//Send a 0 to the queue for right movement
 		if (ea == ACTIVATING_EDGE && eb == INACTIVE){
-			//print4(0,0);
-			enqueue(ButtonQueue, 1);
+			//print4(27,0);
+			enqueue(ButtonQueue, 0);
 		}
 
 		//Send a 3 to the queue for left movement
 		if (ea==ACTIVATING_EDGE && eb==ACTIVE){
-			print8(0,0);
+			//print8(27,0);
 			enqueue(ButtonQueue, 3);
 		}
 	    
-	    	//Send a 0 to the queue for up movement
+	    	//Send a 1 to the queue for up movement
 		if (ec==ACTIVATING_EDGE && ed==INACTIVE){
-			print16(0,0);
-			enqueue(ButtonQueue, 0);
+			//print16(27,0);
+			enqueue(ButtonQueue, 1);
 		}
 		
 	   	//Send a 2 to the queue for down movement
 		if (ec==ACTIVATING_EDGE && ed==ACTIVE){
-			print32(0,0);
+			//print32(27,0);
 			enqueue(ButtonQueue, 2);
 		}
 }
