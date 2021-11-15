@@ -8,9 +8,11 @@
 int main(void);
 void Moving(void);
 void SpawnRandom2(void);
+void SpawnRandom(void);
 void UpdateArray(void);
 void CheckLose(void);
 int static TA[16]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+int static Count;
 
 
 extern int isEmpty(struct Queue*);
@@ -32,6 +34,7 @@ struct Queue {
 void UpdateArray(void)
 {
 	//printwin();
+	Count++;
 	if(isEmpty(ButtonQueue)){}       //if no input from knobs then skips the task
 	else{
 		//print4(51,0);
@@ -47,6 +50,21 @@ void UpdateArray(void)
 		}
 	}
 }
+
+
+void SpawnRandom(void)
+{
+	int Counter=0;
+	int RandomSlot;
+	for (int slot=1; slot<=16; slot++){
+		if (TA[i]==0){
+			Counter++;
+		}
+	}
+	RandomSlot = Count%Counter;
+}
+
+
 
 
 void SpawnRandom2(void)
