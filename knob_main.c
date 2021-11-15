@@ -54,28 +54,28 @@ void UpdateKnobs(){
 		ec = update_btn(&btn_c);
 		ed = update_btn(&btn_d);
 	  //print64(27,0);
-		//Send a 0 to the queue for right movement
+		//Send a 0 to the queue for down movement
 		if (ea == ACTIVATING_EDGE && eb == INACTIVE){
 			//print4(27,0);
 			enqueue(ButtonQueue, 0);
 		}
 
-		//Send a 3 to the queue for left movement
+		//Send a 3 to the queue for up movement
 		if (ea==ACTIVATING_EDGE && eb==ACTIVE){
 			//print8(27,0);
 			enqueue(ButtonQueue, 3);
 		}
 	    
-	    	//Send a 1 to the queue for up movement
+	    	//Send a 1 to the queue for right movement
 		if (ec==ACTIVATING_EDGE && ed==INACTIVE){
 			//print16(27,0);
-			enqueue(ButtonQueue, 1);
+			enqueue(ButtonQueue, 2);
 		}
 		
-	   	//Send a 2 to the queue for down movement
+	   	//Send a 2 to the queue for left movement
 		if (ec==ACTIVATING_EDGE && ed==ACTIVE){
 			//print32(27,0);
-			enqueue(ButtonQueue, 2);
+			enqueue(ButtonQueue, 1);
 		}
 }
 

@@ -144,9 +144,9 @@ void UpdateDisplay(){
 					break;
 				case 1024 : print1024(column,page);
 					break;
-				case 2048 : printwin();
+				case 2048 : while(1){printwin();}
 					break;
-				case 99 : printlose();
+				case 99 : while(1){printlose();}
 					break;
 				default: printnull(column,page);
 					break;
