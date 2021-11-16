@@ -12,7 +12,7 @@ void UpdateArray(void);
 void CheckLose(void);
 int static TA[16]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 int static Count;
-
+int static Change;
 
 extern int isEmpty(struct Queue*);
 extern int dequeue(struct Queue*);
@@ -43,8 +43,11 @@ void UpdateArray(void)// Update virtual TileArray
 	Count++;
 	if(isEmpty(ButtonQueue)){}       //if no input from knobs then skips the task
 	else{
+		Change = 0;
 		Moving();
-		SpawnRandom();                               //task runs in the order of combining and sliding first then spawning a random 2 and finally checks to see if you can move next turn
+		if(Count != 0){
+			SpawnRandom();                               //task runs in the order of combining and sliding first then spawning a random 2 and finally checks to see if you can move next turn
+		}
 		CheckLose();
 		for(int i=0; i<=16; i++){
 			enqueue(DisplayQueue, TA[i]);       // putting the array values into the queue for the display to pull from
@@ -244,511 +247,579 @@ dequeue(ButtonQueue);
 switch (move) {
             case 0: //UP
                 if ( TA[12]==TA[8] && TA[4]==TA[0])
-								{
-									TA[8]= TA[12]+TA[8];
-									TA[12] = 0;
-									TA[0]= TA[4]+TA[0];
-									TA[4] = 0;
-								}
-								else if (TA[12]==TA[8])
-								{
-									TA[8]=TA[12]+TA[8];
-									TA[12]=0;
-								}
-								else if (TA[8]==TA[4])
-								{
-									TA[4]=TA[8]+TA[4];
-									TA[8]=0;
-								}
-								else if (TA[4]==TA[0])
-								{
-									TA[0]=TA[4]+TA[0];
-									TA[4]=0;
-								}
-								if (TA[13]==TA[9] && TA[5]==TA[1])
-								{
-									TA[9]=TA[13]+TA[9];
-									TA[13]=0;
-									TA[1]=TA[5]+TA[1];
-									TA[5]=0;
-								}
-								else if (TA[13]==TA[9])
-								{
-									TA[9]=TA[13]+TA[9];
-									TA[13]=0;
-								}
-								else if (TA[9]==TA[5])
-								{
-									TA[5]=TA[9]+TA[5];
-									TA[9]=0;
-								}
-								else if (TA[5]==TA[1])
-								{
-									TA[1]=TA[5]+TA[1];
-									TA[5]=0;
-								}
-								if (TA[14]==TA[10] && TA[6]==TA[2])
-								{
-									TA[10]=TA[14]+TA[10];
-									TA[14]=0;
-									TA[2]=TA[6]+TA[2];
-									TA[14]=0;
-								}
-								else if (TA[14]==TA[10])
-								{
-									TA[10]=TA[14]+TA[10];
-									TA[14]=0;
-								}
-								else if (TA[10]==TA[6])
-								{
-									TA[6]=TA[10]+TA[6];
-									TA[10]=0;
-								}
-								else if (TA[6]==TA[2])
-								{
-									TA[2]=TA[6]+TA[2];
-									TA[6]=0;
-								}
-								if (TA[15]==TA[11] && TA[7]==TA[3])
-								{
-									TA[11]=TA[15]+TA[11];
-									TA[15]=0;
-									TA[3]=TA[7]+TA[3];
-									TA[7]=0;
-								}
-								else if (TA[15]==TA[11])
-								{
-									TA[11]=TA[15]+TA[11];
-									TA[15]=0;
-								}
-								else if (TA[11]==TA[7])
-								{
-									TA[7]=TA[11]+TA[7];
-									TA[11]=0;
-								}
-								else if (TA[7]==TA[3])
-								{
-									TA[3]=TA[7]+TA[3];
-									TA[7]=0;
-								}
-									
-								if (TA[12] != 0 && TA[8] == 0 && TA[4] == 0 && TA[0] ==0){ TA[0] = TA[12]; TA[12] = 0;}
-								else if (TA[12] != 0 && TA[8] == 0 && TA[4] == 0){ TA[4] = TA[12]; TA[12] = 0;}
-								else if (TA[12] != 0 && TA[8] == 0){TA[8] = TA[12]; TA[12] = 0;}
+		{
+			TA[8]= TA[12]+TA[8];
+			TA[12] = 0;
+			TA[0]= TA[4]+TA[0];
+			TA[4] = 0;
+			Change++;
+		}
+		else if (TA[12]==TA[8])
+		{
+			TA[8]=TA[12]+TA[8];
+			TA[12]=0;
+			Change++;
+		}
+		else if (TA[8]==TA[4])
+		{
+			TA[4]=TA[8]+TA[4];
+			TA[8]=0;
+			Change++;
+		}
+		else if (TA[4]==TA[0])
+		{
+			TA[0]=TA[4]+TA[0];
+			TA[4]=0;
+			Change++;
+		}
+		if (TA[13]==TA[9] && TA[5]==TA[1])
+		{
+			TA[9]=TA[13]+TA[9];
+			TA[13]=0;
+			TA[1]=TA[5]+TA[1];
+			TA[5]=0;
+			Change++;
+		}
+		else if (TA[13]==TA[9])
+		{
+			TA[9]=TA[13]+TA[9];
+			TA[13]=0;
+			Change++;
+		}
+		else if (TA[9]==TA[5])
+		{
+			TA[5]=TA[9]+TA[5];
+			TA[9]=0;
+			Change++;
+		}
+		else if (TA[5]==TA[1])
+		{
+			TA[1]=TA[5]+TA[1];
+			TA[5]=0;
+			Change++;
+		}
+		if (TA[14]==TA[10] && TA[6]==TA[2])
+		{
+			TA[10]=TA[14]+TA[10];
+			TA[14]=0;
+			TA[2]=TA[6]+TA[2];
+			TA[14]=0;
+			Change++;
+		}
+		else if (TA[14]==TA[10])
+		{
+			TA[10]=TA[14]+TA[10];
+			TA[14]=0;
+			Change++;
+		}
+		else if (TA[10]==TA[6])
+		{
+			TA[6]=TA[10]+TA[6];
+			TA[10]=0;
+			Change++;
+		}
+		else if (TA[6]==TA[2])
+		{
+			TA[2]=TA[6]+TA[2];
+			TA[6]=0;
+			Change++;
+		}
+		if (TA[15]==TA[11] && TA[7]==TA[3])
+		{
+			TA[11]=TA[15]+TA[11];
+			TA[15]=0;
+			TA[3]=TA[7]+TA[3];
+			TA[7]=0;
+			Change++;
+		}
+		else if (TA[15]==TA[11])
+		{
+			TA[11]=TA[15]+TA[11];
+			TA[15]=0;
+			Change++;
+		}
+		else if (TA[11]==TA[7])
+		{
+			TA[7]=TA[11]+TA[7];
+			TA[11]=0;
+			Change++;
+		}
+		else if (TA[7]==TA[3])
+		{
+			TA[3]=TA[7]+TA[3];
+			TA[7]=0;
+			Change++;
+		}
 
-								if (TA[13] != 0 && TA[9] == 0 && TA[5] == 0 && TA[1] ==0 ){TA[1] = TA[13] ; TA[13] = 0;}
-								else if (TA[13] != 0 && TA[9] == 0 && TA[5] == 0 ){ TA[5] = TA[13] ; TA[13] = 0;}
-								else if (TA[13] != 0 && TA[9] == 0  ){ TA[9] = TA[13] ; TA[13] = 0;}
+		if (TA[12] != 0 && TA[8] == 0 && TA[4] == 0 && TA[0] ==0){ TA[0] = TA[12]; TA[12] = 0; Change++;}
+		else if (TA[12] != 0 && TA[8] == 0 && TA[4] == 0){ TA[4] = TA[12]; TA[12] = 0;Change++;}
+		else if (TA[12] != 0 && TA[8] == 0){TA[8] = TA[12]; TA[12] = 0;Change++;}
 
-								if (TA[14] != 0 && TA[10] == 0 && TA[6] == 0 && TA[2] ==0 ){TA[2] = TA[14] ; TA[14] = 0;}
-								else if (TA[14] != 0 && TA[10] == 0 && TA[6] == 0 ){ TA[6] = TA[14] ; TA[14] = 0;}
-								else if (TA[14] != 0 && TA[10] == 0  ){ TA[10] = TA[14] ; TA[14] = 0;}
+		if (TA[13] != 0 && TA[9] == 0 && TA[5] == 0 && TA[1] ==0 ){TA[1] = TA[13] ; TA[13] = 0;Change++;}
+		else if (TA[13] != 0 && TA[9] == 0 && TA[5] == 0 ){ TA[5] = TA[13] ; TA[13] = 0;Change++;}
+		else if (TA[13] != 0 && TA[9] == 0  ){ TA[9] = TA[13] ; TA[13] = 0;Change++;}
 
-								if (TA[15] != 0 && TA[11] == 0 && TA[7] == 0 && TA[3] ==0 ){TA[3] = TA[15] ; TA[15] = 0;}
-								else if (TA[15] != 0 && TA[11] == 0 && TA[7] == 0 ){TA[7] = TA[15] ; TA[15] = 0;}
-								else if (TA[15] != 0 && TA[11] == 0  ){TA[11] = TA[15] ; TA[15] = 0;}
+		if (TA[14] != 0 && TA[10] == 0 && TA[6] == 0 && TA[2] ==0 ){TA[2] = TA[14] ; TA[14] = 0;Change++;}
+		else if (TA[14] != 0 && TA[10] == 0 && TA[6] == 0 ){ TA[6] = TA[14] ; TA[14] = 0;Change++;}
+		else if (TA[14] != 0 && TA[10] == 0  ){ TA[10] = TA[14] ; TA[14] = 0;Change++;}
 
-								if (TA[8] != 0 && TA[4] == 0 && TA[0] == 0){TA[0] = TA[8] ; TA[8] = 0;}
-								else if (TA[8] != 0 && TA[4] == 0  ){ TA[4] = TA[8] ; TA[8] = 0;}
+		if (TA[15] != 0 && TA[11] == 0 && TA[7] == 0 && TA[3] ==0 ){TA[3] = TA[15] ; TA[15] = 0;Change++;}
+		else if (TA[15] != 0 && TA[11] == 0 && TA[7] == 0 ){TA[7] = TA[15] ; TA[15] = 0;Change++;}
+		else if (TA[15] != 0 && TA[11] == 0  ){TA[11] = TA[15] ; TA[15] = 0;Change++;}
 
-								if (TA[9] != 0 && TA[5] == 0 && TA[1] == 0){TA[1] = TA[9] ; TA[9] = 0;}
-								else if (TA[9] != 0 && TA[5] == 0  ){ TA[5] = TA[9] ; TA[9] = 0;}
+		if (TA[8] != 0 && TA[4] == 0 && TA[0] == 0){TA[0] = TA[8] ; TA[8] = 0;Change++;}
+		else if (TA[8] != 0 && TA[4] == 0  ){ TA[4] = TA[8] ; TA[8] = 0;Change++;}
 
-								if (TA[10] != 0 && TA[6] == 0 && TA[2] == 0){TA[2] = TA[10] ; TA[10] = 0;}
-								else if (TA[10] != 0 && TA[6] == 0  ){ TA[6] = TA[10] ; TA[10] = 0;}
+		if (TA[9] != 0 && TA[5] == 0 && TA[1] == 0){TA[1] = TA[9] ; TA[9] = 0;Change++;}
+		else if (TA[9] != 0 && TA[5] == 0  ){ TA[5] = TA[9] ; TA[9] = 0;Change++;}
 
-								if (TA[11] != 0 && TA[7] == 0 && TA[3] == 0){ TA[3] = TA[11] ; TA[11] = 0;}
-								else if (TA[11] != 0 && TA[7] == 0){ TA[7] = TA[11] ; TA[11] = 0;}
+		if (TA[10] != 0 && TA[6] == 0 && TA[2] == 0){TA[2] = TA[10] ; TA[10] = 0;Change++;}
+		else if (TA[10] != 0 && TA[6] == 0  ){ TA[6] = TA[10] ; TA[10] = 0;Change++;}
 
-								if (TA[4] != 0 && TA[0] == 0){ TA[0] = TA[4] ; TA[4] = 0;}
+		if (TA[11] != 0 && TA[7] == 0 && TA[3] == 0){ TA[3] = TA[11] ; TA[11] = 0;Change++;}
+		else if (TA[11] != 0 && TA[7] == 0){ TA[7] = TA[11] ; TA[11] = 0;Change++;}
 
-								if (TA[5] != 0 && TA[1] == 0){ TA[1] = TA[5] ; TA[5] = 0;}
+		if (TA[4] != 0 && TA[0] == 0){ TA[0] = TA[4] ; TA[4] = 0;Change++;}
 
-								if (TA[6] != 0 && TA[2] == 0){ TA[2] = TA[6] ; TA[6] = 0;}
+		if (TA[5] != 0 && TA[1] == 0){ TA[1] = TA[5] ; TA[5] = 0;Change++;}
 
-								if (TA[7] != 0 && TA[3] == 0){ TA[3] = TA[7] ; TA[7] = 0;}
+		if (TA[6] != 0 && TA[2] == 0){ TA[2] = TA[6] ; TA[6] = 0;Change++;}
+
+		if (TA[7] != 0 && TA[3] == 0){ TA[3] = TA[7] ; TA[7] = 0;Change++;}
+		else()
                 break;
             case 1: // Right
                 if ( TA[3]==TA[2] && TA[1]==TA[0])
-								{
-									TA[3]= TA[3]+TA[2];
-									TA[2]=0;
-									TA[1]= TA[1]+TA[0];
-									TA[0]=0;
-								}
-								else if (TA[3]==TA[2])
-								{
-									TA[3]=TA[2]+TA[3];
-									TA[2]=0;
-								}
-								else if (TA[2]==TA[1])
-								{
-									TA[2]=TA[1]+TA[2];
-									TA[1]=0;
-								}
-								else if (TA[1]==TA[0])
-								{
-									TA[1]=TA[1]+TA[0];
-									TA[0]=0;
-								}
-								
-								if (TA[7]==TA[6] && TA[5]==TA[4])
-								{
-									TA[7]=TA[7]+TA[6];
-									TA[6]=0;
-									TA[5]=TA[5]+TA[4];
-									TA[4]=0;
-								}
-								else if (TA[7]==TA[6])
-								{
-									TA[7]=TA[7]+TA[6];
-									TA[6]=0;
-								}
-								else if (TA[6]==TA[5])
-								{
-									TA[6]=TA[6]+TA[5];
-									TA[5]=0;
-								}
-								else if (TA[5]==TA[4])
-								{
-									TA[5]=TA[5]+TA[4];
-									TA[4]=0;
-								}
-								if (TA[11]==TA[10] && TA[9]==TA[8])
-								{
-									TA[11]=TA[11]+TA[10];
-									TA[10]=0;
-									TA[9]=TA[9]+TA[8];
-									TA[8]=0;
-								}
-								else if (TA[11]==TA[10])
-								{
-									TA[11]=TA[11]+TA[10];
-									TA[10]=0;
-								}
-								else if (TA[10]==TA[9])
-								{
-									TA[10]=TA[10]+TA[9];
-									TA[9]=0;
-								}
-								else if (TA[9]==TA[8])
-								{
-									TA[9]=TA[9]+TA[8];
-									TA[8]=0;
-								}
-								if (TA[15]==TA[14] && TA[13]==TA[12])
-								{
-									TA[15]=TA[14]+TA[15];
-									TA[14]=0;
-									TA[13]=TA[13]+TA[12];
-									TA[12]=0;
-								}
-								else if (TA[15]==TA[14])
-								{
-									TA[15]=TA[15]+TA[14];
-									TA[14]=0;
-								}
-								else if (TA[14]==TA[13])
-								{
-									TA[14]=TA[14]+TA[13];
-									TA[13]=0;
-								}
-								else if (TA[13]==TA[12])
-								{
-									TA[13]=TA[12]+TA[13];
-									TA[12]=0;
-								}
-									
-									if (TA[0] != 0 && TA[1] == 0 && TA[2] == 0 && TA[3] ==0 ){ TA[3] = TA[0] ; TA[0] = 0;}
-								else if (TA[0] != 0 && TA[1] == 0 && TA[2] == 0 ){ TA[2] = TA[0] ; TA[0] =0;}
-								else if (TA[0] != 0 && TA[1] == 0  ){ TA[1] = TA[0]; TA[0] = 0;}
+		{
+			TA[3]= TA[3]+TA[2];
+			TA[2]=0;
+			TA[1]= TA[1]+TA[0];
+			TA[0]=0;
+			Change++;
+		}
+		else if (TA[3]==TA[2])
+		{
+			TA[3]=TA[2]+TA[3];
+			TA[2]=0;
+			Change++;
+		}
+		else if (TA[2]==TA[1])
+		{
+			TA[2]=TA[1]+TA[2];
+			TA[1]=0;
+			Change++;
+		}
+		else if (TA[1]==TA[0])
+		{
+			TA[1]=TA[1]+TA[0];
+			TA[0]=0;
+			Change++;
+		}
 
-								if (TA[4] != 0 && TA[5] == 0 && TA[6] == 0 && TA[7] ==0 ){ TA[7] = TA[4] ; TA[4] = 0;}
-								else if (TA[4] != 0 && TA[5] == 0 && TA[6] == 0 ){ TA[6] = TA[4] ; TA[4] = 0;}
-								else if (TA[4] != 0 && TA[5] == 0  ){ TA[5] = TA[4] ; TA[4] = 0;}
+		if (TA[7]==TA[6] && TA[5]==TA[4])
+		{
+			TA[7]=TA[7]+TA[6];
+			TA[6]=0;
+			TA[5]=TA[5]+TA[4];
+			TA[4]=0;
+			Change++;
+		}
+		else if (TA[7]==TA[6])
+		{
+			TA[7]=TA[7]+TA[6];
+			TA[6]=0;
+			Change++;
+		}
+		else if (TA[6]==TA[5])
+		{
+			TA[6]=TA[6]+TA[5];
+			TA[5]=0;
+			Change++;
+		}
+		else if (TA[5]==TA[4])
+		{
+			TA[5]=TA[5]+TA[4];
+			TA[4]=0;
+			Change++;
+		}
+		if (TA[11]==TA[10] && TA[9]==TA[8])
+		{
+			TA[11]=TA[11]+TA[10];
+			TA[10]=0;
+			TA[9]=TA[9]+TA[8];
+			TA[8]=0;
+			Change++;
+		}
+		else if (TA[11]==TA[10])
+		{
+			TA[11]=TA[11]+TA[10];
+			TA[10]=0;
+			Change++;
+		}
+		else if (TA[10]==TA[9])
+		{
+			TA[10]=TA[10]+TA[9];
+			TA[9]=0;
+			Change++;
+		}
+		else if (TA[9]==TA[8])
+		{
+			TA[9]=TA[9]+TA[8];
+			TA[8]=0;
+			Change++;
+		}
+		if (TA[15]==TA[14] && TA[13]==TA[12])
+		{
+			TA[15]=TA[14]+TA[15];
+			TA[14]=0;
+			TA[13]=TA[13]+TA[12];
+			TA[12]=0;
+			Change++;
+		}
+		else if (TA[15]==TA[14])
+		{
+			TA[15]=TA[15]+TA[14];
+			TA[14]=0;
+			Change++;
+		}
+		else if (TA[14]==TA[13])
+		{
+			TA[14]=TA[14]+TA[13];
+			TA[13]=0;
+			Change++;
+		}
+		else if (TA[13]==TA[12])
+		{
+			TA[13]=TA[12]+TA[13];
+			TA[12]=0;
+			Change++;
+		}
 
-								if (TA[8] != 0 && TA[9] == 0 && TA[10] == 0 && TA[11] ==0 ){ TA[11] = TA[8] ; TA[8] = 0;}
-								else if (TA[8] != 0 && TA[9] == 0 && TA[10] == 0 ){ TA[10] = TA[8] ; TA[8] = 0;}
-								else if (TA[8] != 0 && TA[9] == 0  ){ TA[9] = TA[8] ; TA[8] = 0;}
+			if (TA[0] != 0 && TA[1] == 0 && TA[2] == 0 && TA[3] ==0 ){ TA[3] = TA[0] ; TA[0] = 0;Change++;}
+		else if (TA[0] != 0 && TA[1] == 0 && TA[2] == 0 ){ TA[2] = TA[0] ; TA[0] =0;Change++;}
+		else if (TA[0] != 0 && TA[1] == 0  ){ TA[1] = TA[0]; TA[0] = 0;Change++;}
 
-								if (TA[12] != 0 && TA[13] == 0 && TA[14] == 0 && TA[15] ==0 ){ TA[15] = TA[12] ; TA[12] = 0;}
-								else if (TA[12] != 0 && TA[13] == 0 && TA[14] == 0 ){ TA[14] = TA[12] ; TA[12] = 0;}
-								else if (TA[12] != 0 && TA[13] == 0  ){ TA[13] = TA[12] ; TA[12] = 0;}
+		if (TA[4] != 0 && TA[5] == 0 && TA[6] == 0 && TA[7] ==0 ){ TA[7] = TA[4] ; TA[4] = 0;Change++;}
+		else if (TA[4] != 0 && TA[5] == 0 && TA[6] == 0 ){ TA[6] = TA[4] ; TA[4] = 0;Change++;}
+		else if (TA[4] != 0 && TA[5] == 0  ){ TA[5] = TA[4] ; TA[4] = 0;Change++;}
 
-								if (TA[1] != 0 && TA[2] == 0 && TA[3] == 0 ){ TA[3] = TA[1] ; TA[1] = 0;}
-								else if (TA[1] != 0 && TA[2] == 0  ){ TA[2] = TA[1] ; TA[1] = 0;}
+		if (TA[8] != 0 && TA[9] == 0 && TA[10] == 0 && TA[11] ==0 ){ TA[11] = TA[8] ; TA[8] = 0;Change++;}
+		else if (TA[8] != 0 && TA[9] == 0 && TA[10] == 0 ){ TA[10] = TA[8] ; TA[8] = 0;Change++;}
+		else if (TA[8] != 0 && TA[9] == 0  ){ TA[9] = TA[8] ; TA[8] = 0;Change++;}
 
-								if (TA[5] != 0 && TA[6] == 0 && TA[6] == 0 ){ TA[6] = TA[5] ; TA[5] = 0;}
-								else if (TA[5] != 0 && TA[6] == 0  ){ TA[5] = TA[5] ; TA[5] = 0;}
+		if (TA[12] != 0 && TA[13] == 0 && TA[14] == 0 && TA[15] ==0 ){ TA[15] = TA[12] ; TA[12] = 0;Change++;}
+		else if (TA[12] != 0 && TA[13] == 0 && TA[14] == 0 ){ TA[14] = TA[12] ; TA[12] = 0;Change++;}
+		else if (TA[12] != 0 && TA[13] == 0  ){ TA[13] = TA[12] ; TA[12] = 0;Change++;}
 
-								if (TA[9] != 0 && TA[10] == 0 && TA[11] == 0 ){ TA[11] = TA[9] ; TA[9] = 0;}
-								else if (TA[9] != 0 && TA[10] == 0  ){ TA[10] = TA[9] ; TA[9] = 0;}
+		if (TA[1] != 0 && TA[2] == 0 && TA[3] == 0 ){ TA[3] = TA[1] ; TA[1] = 0;Change++;}
+		else if (TA[1] != 0 && TA[2] == 0  ){ TA[2] = TA[1] ; TA[1] = 0;Change++;}
 
-								if (TA[13] != 0 && TA[14] == 0 && TA[15] == 0 ){ TA[15] =TA[13] ; TA[13] = 0;}
-								else if (TA[13] != 0 && TA[14] == 0  ){ TA[14] = TA[13] ; TA[13] = 0;}
+		if (TA[5] != 0 && TA[6] == 0 && TA[6] == 0 ){ TA[6] = TA[5] ; TA[5] = 0;Change++;}
+		else if (TA[5] != 0 && TA[6] == 0  ){ TA[5] = TA[5] ; TA[5] = 0;Change++;}
 
-								if (TA[2] != 0 && TA[3] == 0  ){ TA[3] = TA[2] ; TA[2] = 0;}
+		if (TA[9] != 0 && TA[10] == 0 && TA[11] == 0 ){ TA[11] = TA[9] ; TA[9] = 0;Change++;}
+		else if (TA[9] != 0 && TA[10] == 0  ){ TA[10] = TA[9] ; TA[9] = 0;Change++;}
 
-								if (TA[6] != 0 && TA[7] == 0  ){ TA[7] = TA[6] ; TA[6] = 0;}
+		if (TA[13] != 0 && TA[14] == 0 && TA[15] == 0 ){ TA[15] =TA[13] ; TA[13] = 0;Change++;}
+		else if (TA[13] != 0 && TA[14] == 0  ){ TA[14] = TA[13] ; TA[13] = 0;Change++;}
 
-								if (TA[10] != 0 && TA[11] == 0  ){ TA[11] = TA[10] ; TA[10] = 0;}
-								
-								if (TA[13] != 0 && TA[14] == 0  ){ TA[14] = TA[13] ; TA[13] = 0;}
+		if (TA[2] != 0 && TA[3] == 0  ){ TA[3] = TA[2] ; TA[2] = 0;Change++;}
+
+		if (TA[6] != 0 && TA[7] == 0  ){ TA[7] = TA[6] ; TA[6] = 0;Change++;}
+
+		if (TA[10] != 0 && TA[11] == 0  ){ TA[11] = TA[10] ; TA[10] = 0;Change++;}
+
+		if (TA[13] != 0 && TA[14] == 0  ){ TA[14] = TA[13] ; TA[13] = 0;Change++;}
+		else()
                 break;
 								
             case 2: // Left
                 if ( TA[3]==TA[2] && TA[1]==TA[0])
-								{
-									TA[2]= TA[3]+TA[2];
-									TA[3]=0;
-									TA[0]= TA[1]+TA[0];
-									TA[1]=0;
-								}
-								else if (TA[3]==TA[2])
-								{
-									TA[2]=TA[2]+TA[3];
-									TA[3]=0;
-								}
-								else if (TA[2]==TA[1])
-								{
-									TA[1]=TA[1]+TA[2];
-									TA[2]=0;
-								}
-								else if (TA[1]==TA[0])
-								{
-									TA[0]=TA[1]+TA[0];
-									TA[1]=0;
-								}
-								if (TA[7]==TA[6] && TA[5]==TA[4])
-								{
-									TA[6]=TA[7]+TA[6];
-									TA[7]=0;
-									TA[4]=TA[5]+TA[4];
-									TA[5]=0;
-								}
-								else if (TA[7]==TA[6])
-								{
-									TA[6]=TA[7]+TA[6];
-									TA[7]=0;
-								}
-								else if (TA[6]==TA[5])
-								{
-									TA[5]=TA[6]+TA[5];
-									TA[6]=0;
-								}
-								else if (TA[5]==TA[4])
-								{
-									TA[4]=TA[5]+TA[4];
-									TA[5]=0;
-								}
-								if (TA[11]==TA[10] && TA[9]==TA[8])
-								{
-									TA[10]=TA[11]+TA[10];
-									TA[11]=0;
-									TA[8]=TA[9]+TA[8];
-									TA[9]=0;
-								}
-								else if (TA[11]==TA[10])
-								{
-									TA[10]=TA[11]+TA[10];
-									TA[11]=0;
-								}
-								else if (TA[10]==TA[9])
-								{
-									TA[9]=TA[10]+TA[9];
-									TA[10]=0;
-								}
-								else if (TA[9]==TA[8])
-								{
-									TA[8]=TA[9]+TA[8];
-									TA[9]=0;
-								}
-								if (TA[15]==TA[14] && TA[13]==TA[12])
-								{
-									TA[14]=TA[15]+TA[14];
-									TA[15]=0;
-									TA[12]=TA[13]+TA[12];
-									TA[13]=0;
-								}
-								else if (TA[15]==TA[14])
-								{
-									TA[14]=TA[15]+TA[14];
-									TA[15]=0;
-								}
-								else if (TA[14]==TA[13])
-								{
-									TA[13]=TA[14]+TA[13];
-									TA[14]=0;
-								}
-								else if (TA[13]==TA[12])
-								{
-									TA[12]=TA[12]+TA[13];
-									TA[13]=0;
-								}
-									
-								if (TA[3] != 0 && TA[2] == 0 && TA[1] == 0 && TA[0] ==0 ){ TA[0] = TA[3] ; TA[3] = 0;}
-								else if (TA[3] != 0 && TA[2] == 0 && TA[1] == 0 ){ TA[1] = TA[3] ; TA[3] = 0;}
-								else if (TA[3] != 0 && TA[2] == 0  ){ TA[2] = TA[3] ; TA[3] = 0;}
+		{
+			TA[2]= TA[3]+TA[2];
+			TA[3]=0;
+			TA[0]= TA[1]+TA[0];
+			TA[1]=0;
+			Change++;
+		}
+		else if (TA[3]==TA[2])
+		{
+			TA[2]=TA[2]+TA[3];
+			TA[3]=0;
+			Change++;
+		}
+		else if (TA[2]==TA[1])
+		{
+			TA[1]=TA[1]+TA[2];
+			TA[2]=0;
+			Change++;
+		}
+		else if (TA[1]==TA[0])
+		{
+			TA[0]=TA[1]+TA[0];
+			TA[1]=0;
+			Change++;
+		}
+		if (TA[7]==TA[6] && TA[5]==TA[4])
+		{
+			TA[6]=TA[7]+TA[6];
+			TA[7]=0;
+			TA[4]=TA[5]+TA[4];
+			TA[5]=0;
+			Change++;
+		}
+		else if (TA[7]==TA[6])
+		{
+			TA[6]=TA[7]+TA[6];
+			TA[7]=0;
+			Change++;
+		}
+		else if (TA[6]==TA[5])
+		{
+			TA[5]=TA[6]+TA[5];
+			TA[6]=0;
+			Change++;
+		}
+		else if (TA[5]==TA[4])
+		{
+			TA[4]=TA[5]+TA[4];
+			TA[5]=0;
+			Change++;
+		}
+		if (TA[11]==TA[10] && TA[9]==TA[8])
+		{
+			TA[10]=TA[11]+TA[10];
+			TA[11]=0;
+			TA[8]=TA[9]+TA[8];
+			TA[9]=0;
+			Change++;
+		}
+		else if (TA[11]==TA[10])
+		{
+			TA[10]=TA[11]+TA[10];
+			TA[11]=0;
+			Change++;
+		}
+		else if (TA[10]==TA[9])
+		{
+			TA[9]=TA[10]+TA[9];
+			TA[10]=0;
+			Change++;
+		}
+		else if (TA[9]==TA[8])
+		{
+			TA[8]=TA[9]+TA[8];
+			TA[9]=0;
+			Change++;
+		}
+		if (TA[15]==TA[14] && TA[13]==TA[12])
+		{
+			TA[14]=TA[15]+TA[14];
+			TA[15]=0;
+			TA[12]=TA[13]+TA[12];
+			TA[13]=0;
+			Change++;
+		}
+		else if (TA[15]==TA[14])
+		{
+			TA[14]=TA[15]+TA[14];
+			TA[15]=0;
+			Change++;
+		}
+		else if (TA[14]==TA[13])
+		{
+			TA[13]=TA[14]+TA[13];
+			TA[14]=0;
+			Change++;
+		}
+		else if (TA[13]==TA[12])
+		{
+			TA[12]=TA[12]+TA[13];
+			TA[13]=0;
+			Change++;
+		}
 
-								if (TA[7] != 0 && TA[5] == 0 && TA[6] == 0 && TA[4] ==0 ){ TA[4] = TA[7] ; TA[7] = 0;}
-								else if (TA[7] != 0 && TA[5] == 0 && TA[6] == 0 ){ TA[5] = TA[7] ; TA[7] = 0;}
-								else if (TA[7] != 0 && TA[6] == 0  ){ TA[6] = TA[7] ; TA[7] = 0;}
+		if (TA[3] != 0 && TA[2] == 0 && TA[1] == 0 && TA[0] ==0 ){ TA[0] = TA[3] ; TA[3] = 0;Change++;}
+		else if (TA[3] != 0 && TA[2] == 0 && TA[1] == 0 ){ TA[1] = TA[3] ; TA[3] = 0;Change++;}
+		else if (TA[3] != 0 && TA[2] == 0  ){ TA[2] = TA[3] ; TA[3] = 0;Change++;}
 
-								if (TA[11] != 0 && TA[9] == 0 && TA[10] == 0 && TA[8] ==0 ){ TA[8] = TA[11] ; TA[11] = 0;}
-								else if (TA[11] != 0 && TA[9] == 0 && TA[10] == 0 ){ TA[9] = TA[11] ; TA[11] = 0;}
-								else if (TA[11] != 0 && TA[10] == 0  ){ TA[10] = TA[11] ; TA[11] = 0;}
+		if (TA[7] != 0 && TA[5] == 0 && TA[6] == 0 && TA[4] ==0 ){ TA[4] = TA[7] ; TA[7] = 0;Change++;}
+		else if (TA[7] != 0 && TA[5] == 0 && TA[6] == 0 ){ TA[5] = TA[7] ; TA[7] = 0;Change++;}
+		else if (TA[7] != 0 && TA[6] == 0  ){ TA[6] = TA[7] ; TA[7] = 0;Change++;}
 
-								if (TA[15] != 0 && TA[13] == 0 && TA[14] == 0 && TA[12] ==0 ){ TA[12] = TA[15] ; TA[15] = 0;}
-								else if (TA[15] != 0 && TA[13] == 0 && TA[14] == 0 ){ TA[13] = TA[15] ; TA[15] = 0;}
-								else if (TA[15] != 0 && TA[14] == 0  ){ TA[14] = TA[15] ; TA[15] = 0;}
+		if (TA[11] != 0 && TA[9] == 0 && TA[10] == 0 && TA[8] ==0 ){ TA[8] = TA[11] ; TA[11] = 0;Change++;}
+		else if (TA[11] != 0 && TA[9] == 0 && TA[10] == 0 ){ TA[9] = TA[11] ; TA[11] = 0;Change++;}
+		else if (TA[11] != 0 && TA[10] == 0  ){ TA[10] = TA[11] ; TA[11] = 0;Change++;}
 
-								if (TA[2] != 0 && TA[1] == 0 && TA[0] == 0 ){ TA[0] = TA[2] ; TA[2] = 0;}
-								else if (TA[2] != 0 && TA[1] == 0  ){ TA[1] = TA[2] ; TA[2] = 0;}
+		if (TA[15] != 0 && TA[13] == 0 && TA[14] == 0 && TA[12] ==0 ){ TA[12] = TA[15] ; TA[15] = 0;Change++;}
+		else if (TA[15] != 0 && TA[13] == 0 && TA[14] == 0 ){ TA[13] = TA[15] ; TA[15] = 0;Change++;}
+		else if (TA[15] != 0 && TA[14] == 0  ){ TA[14] = TA[15] ; TA[15] = 0;Change++;}
 
-								if (TA[6] != 0 && TA[5] == 0 && TA[4] == 0 ){ TA[4] = TA[6] ; TA[6] = 0;}
-								else if (TA[6] != 0 && TA[5] == 0  ){ TA[5] = TA[6] ; TA[6] = 0;}
+		if (TA[2] != 0 && TA[1] == 0 && TA[0] == 0 ){ TA[0] = TA[2] ; TA[2] = 0;Change++;}
+		else if (TA[2] != 0 && TA[1] == 0  ){ TA[1] = TA[2] ; TA[2] = 0;Change++;}
 
-								if (TA[10] != 0 && TA[9] == 0 && TA[8] == 0 ){ TA[8] = TA[10] ; TA[10] = 0;}
-								else if (TA[10] != 0 && TA[9] == 0  ){ TA[9] = TA[10] ; TA[10] = 0;}
+		if (TA[6] != 0 && TA[5] == 0 && TA[4] == 0 ){ TA[4] = TA[6] ; TA[6] = 0;Change++;}
+		else if (TA[6] != 0 && TA[5] == 0  ){ TA[5] = TA[6] ; TA[6] = 0;Change++;}
 
-								if (TA[14] != 0 && TA[13] == 0 && TA[12] == 0 ){ TA[12] = TA[14] ; TA[14] = 0;}
-								else if (TA[14] != 0 && TA[13] == 0 ){ TA[13] = TA[14] ; TA[14] = 0;}
+		if (TA[10] != 0 && TA[9] == 0 && TA[8] == 0 ){ TA[8] = TA[10] ; TA[10] = 0;Change++;}
+		else if (TA[10] != 0 && TA[9] == 0  ){ TA[9] = TA[10] ; TA[10] = 0;Change++;}
 
-								if (TA[1] != 0 && TA[0] == 0  ){ TA[0] = TA[1]; TA[1] = 0;}
+		if (TA[14] != 0 && TA[13] == 0 && TA[12] == 0 ){ TA[12] = TA[14] ; TA[14] = 0;Change++;}
+		else if (TA[14] != 0 && TA[13] == 0 ){ TA[13] = TA[14] ; TA[14] = 0;Change++;}
 
-								if (TA[5] != 0 && TA[4] == 0  ){ TA[4] = TA[5] ; TA[5] = 0;}
+		if (TA[1] != 0 && TA[0] == 0  ){ TA[0] = TA[1]; TA[1] = 0;Change++;}
 
-								if (TA[9] != 0 && TA[8] == 0  ){ TA[8] = TA[9] ; TA[9] = 0;}
+		if (TA[5] != 0 && TA[4] == 0  ){ TA[4] = TA[5] ; TA[5] = 0;Change++;}
 
-								if (TA[13] != 0 && TA[12] == 0  ){ TA[12] = TA[13] ; TA[13] = 0;}
+		if (TA[9] != 0 && TA[8] == 0  ){ TA[8] = TA[9] ; TA[9] = 0;Change++;}
+
+		if (TA[13] != 0 && TA[12] == 0  ){ TA[12] = TA[13] ; TA[13] = 0;Change++;}
+		else()
 
                 break;
 	   case 3: // Down
 		if ( TA[12]==TA[8] && TA[4]==TA[0])
-								{
-									TA[12]=TA[12]+TA[8];
-									TA[8]=0;
-									TA[4]=TA[4]+TA[0];
-									TA[0]=0;
-								}
-								else if (TA[12]==TA[8])
-								{
-									TA[12]=TA[12]+TA[8];
-									TA[8]=0;
-								}
-								else if (TA[8]==TA[4])
-								{
-									TA[8]=TA[8]+TA[4];
-									TA[4]=0;
-								}
-								else if (TA[4]==TA[0])
-								{
-									TA[4]=TA[4]+TA[0];
-									TA[0]=0;
-								}
-								if (TA[13]==TA[9] && TA[5]==TA[1])
-								{
-									TA[13]=TA[13]+TA[9];
-									TA[9]=0;
-									TA[5]=TA[5]+TA[1];
-									TA[1]=0;
-								}
-								else if (TA[13]==TA[9])
-								{
-									TA[13]=TA[13]+TA[9];
-									TA[9]=0;
-								}
-								else if (TA[9]==TA[5])
-								{
-									TA[9]=TA[9]+TA[5];
-									TA[5]=0;
-								}
-								else if (TA[5]==TA[1])
-								{
-									TA[5]=TA[5]+TA[1];
-									TA[1]=0;
-								}
-								if (TA[14]==TA[10] && TA[6]==TA[2])
-								{
-									TA[14]=TA[14]+TA[10];
-									TA[10]=0;
-									TA[6]=TA[6]+TA[2];
-									TA[2]=0;
-								}
-								else if (TA[14]==TA[10])
-								{
-									TA[14]=TA[14]+TA[10];
-									TA[10]=0;
-								}
-								else if (TA[10]==TA[6])
-								{
-									TA[10]=TA[10]+TA[6];
-									TA[6]=0;
-								}
-								else if (TA[6]==TA[2])
-								{
-									TA[6]=TA[6]+TA[2];
-									TA[2]=0;
-								}
-								if (TA[15]==TA[11] && TA[7]==TA[3])
-								{
-									TA[15]=TA[15]+TA[11];
-									TA[11]=0;
-									TA[7]=TA[7]+TA[3];
-									TA[3]=0;
-								}
-								else if (TA[15]==TA[11])
-								{
-									TA[15]=TA[15]+TA[11];
-									TA[11]=0;
-								}
-								else if (TA[11]==TA[7])
-								{
-									TA[11]=TA[11]+TA[7];
-									TA[7]=0;
-								}
-								else if (TA[7]==TA[3])
-								{
-									TA[7]=TA[7]+TA[3];
-									TA[3]=0;
-								}
-									
-								if (TA[0] != 0 && TA[4] == 0 && TA[8] == 0 && TA[12] ==0 ){ TA[12] = TA[0] ; TA[0] = 0;}
-								else if (TA[0] != 0 && TA[4] == 0 && TA[8] == 0 ){ TA[8] = TA[0] ; TA[0] = 0;}
-								else if (TA[0] != 0 && TA[4] == 0  ){ TA[4] = TA[0] ; TA[0] = 0;}
+		{
+			TA[12]=TA[12]+TA[8];
+			TA[8]=0;
+			TA[4]=TA[4]+TA[0];
+			TA[0]=0;
+			Change++;
+		}
+		else if (TA[12]==TA[8])
+		{
+			TA[12]=TA[12]+TA[8];
+			TA[8]=0;
+			Change++;
+		}
+		else if (TA[8]==TA[4])
+		{
+			TA[8]=TA[8]+TA[4];
+			TA[4]=0;
+			Change++;
+		}
+		else if (TA[4]==TA[0])
+		{
+			TA[4]=TA[4]+TA[0];
+			TA[0]=0;
+			Change++;
+		}
+		if (TA[13]==TA[9] && TA[5]==TA[1])
+		{
+			TA[13]=TA[13]+TA[9];
+			TA[9]=0;
+			TA[5]=TA[5]+TA[1];
+			TA[1]=0;
+			Change++;
+		}
+		else if (TA[13]==TA[9])
+		{
+			TA[13]=TA[13]+TA[9];
+			TA[9]=0;
+			Change++;
+		}
+		else if (TA[9]==TA[5])
+		{
+			TA[9]=TA[9]+TA[5];
+			TA[5]=0;
+			Change++;
+		}
+		else if (TA[5]==TA[1])
+		{
+			TA[5]=TA[5]+TA[1];
+			TA[1]=0;
+			Change++;
+		}
+		if (TA[14]==TA[10] && TA[6]==TA[2])
+		{
+			TA[14]=TA[14]+TA[10];
+			TA[10]=0;
+			TA[6]=TA[6]+TA[2];
+			TA[2]=0;
+			Change++;
+		}
+		else if (TA[14]==TA[10])
+		{
+			TA[14]=TA[14]+TA[10];
+			TA[10]=0;
+			Change++;
+		}
+		else if (TA[10]==TA[6])
+		{
+			TA[10]=TA[10]+TA[6];
+			TA[6]=0;
+			Change++;
+		}
+		else if (TA[6]==TA[2])
+		{
+			TA[6]=TA[6]+TA[2];
+			TA[2]=0;
+			Change++;
+		}
+		if (TA[15]==TA[11] && TA[7]==TA[3])
+		{
+			TA[15]=TA[15]+TA[11];
+			TA[11]=0;
+			TA[7]=TA[7]+TA[3];
+			TA[3]=0;
+			Change++;
+		}
+		else if (TA[15]==TA[11])
+		{
+			TA[15]=TA[15]+TA[11];
+			TA[11]=0;
+			Change++;
+		}
+		else if (TA[11]==TA[7])
+		{
+			TA[11]=TA[11]+TA[7];
+			TA[7]=0;
+			Change++;
+		}
+		else if (TA[7]==TA[3])
+		{
+			TA[7]=TA[7]+TA[3];
+			TA[3]=0;
+			Change++;
+		}
 
-								if (TA[1] != 0 && TA[5] == 0 && TA[9] == 0 && TA[13] ==0 ){ TA[13] = TA[1] ; TA[1] = 0;}
-								else if (TA[1] != 0 && TA[5] == 0 && TA[9] == 0 ){ TA[9] = TA[1] ; TA[1] = 0;}
-								else if (TA[1] != 0 && TA[5] == 0  ){ TA[5] = TA[1] ; TA[1] = 0;}
+		if (TA[0] != 0 && TA[4] == 0 && TA[8] == 0 && TA[12] ==0 ){ TA[12] = TA[0] ; TA[0] = 0;Change++;}
+		else if (TA[0] != 0 && TA[4] == 0 && TA[8] == 0 ){ TA[8] = TA[0] ; TA[0] = 0;Change++;}
+		else if (TA[0] != 0 && TA[4] == 0  ){ TA[4] = TA[0] ; TA[0] = 0;Change++;}
 
-								if (TA[2] != 0 && TA[6] == 0 && TA[10] == 0 && TA[14] ==0 ){ TA[14] = TA[2] ; TA[2] = 0;}
-								else if (TA[2] != 0 && TA[6] == 0 && TA[10] == 0 ){ TA[10] = TA[2] ; TA[2] = 0;}
-								else if (TA[2] != 0 && TA[6] == 0  ){ TA[6] = TA[2] ; TA[2] = 0;}
+		if (TA[1] != 0 && TA[5] == 0 && TA[9] == 0 && TA[13] ==0 ){ TA[13] = TA[1] ; TA[1] = 0;Change++;}
+		else if (TA[1] != 0 && TA[5] == 0 && TA[9] == 0 ){ TA[9] = TA[1] ; TA[1] = 0;Change++;}
+		else if (TA[1] != 0 && TA[5] == 0  ){ TA[5] = TA[1] ; TA[1] = 0;Change++;}
 
-								if (TA[3] != 0 && TA[7] == 0 && TA[11] == 0 && TA[15] ==0 ){ TA[15] = TA[3] ; TA[3] = 0;}
-								else if (TA[3] != 0 && TA[7] == 0 && TA[11] == 0 ){ TA[11] = TA[3] ; TA[3] = 0;}
-								else if (TA[3] != 0 && TA[7] == 0  ){ TA[7] = TA[3] ; TA[3] = 0;}
+		if (TA[2] != 0 && TA[6] == 0 && TA[10] == 0 && TA[14] ==0 ){ TA[14] = TA[2] ; TA[2] = 0;Change++;}
+		else if (TA[2] != 0 && TA[6] == 0 && TA[10] == 0 ){ TA[10] = TA[2] ; TA[2] = 0;Change++;}
+		else if (TA[2] != 0 && TA[6] == 0  ){ TA[6] = TA[2] ; TA[2] = 0;Change++;}
 
-								if (TA[4] != 0 && TA[8] == 0 && TA[12] == 0 ){ TA[12] = TA[4] ; TA[4] = 0;}
-								else if (TA[4] != 0 && TA[8] == 0  ){ TA[8] = TA[4] ; TA[4] = 0;}
+		if (TA[3] != 0 && TA[7] == 0 && TA[11] == 0 && TA[15] ==0 ){ TA[15] = TA[3] ; TA[3] = 0;Change++;}
+		else if (TA[3] != 0 && TA[7] == 0 && TA[11] == 0 ){ TA[11] = TA[3] ; TA[3] = 0;Change++;}
+		else if (TA[3] != 0 && TA[7] == 0  ){ TA[7] = TA[3] ; TA[3] = 0;Change++;}
 
-								if (TA[5] != 0 && TA[9] == 0 && TA[13] == 0 ){ TA[13] = TA[5] ; TA[5] = 0;}
-								else if (TA[5] != 0 && TA[9] == 0  ){ TA[9] = TA[5] ; TA[5] = 0;}
+		if (TA[4] != 0 && TA[8] == 0 && TA[12] == 0 ){ TA[12] = TA[4] ; TA[4] = 0;Change++;}
+		else if (TA[4] != 0 && TA[8] == 0  ){ TA[8] = TA[4] ; TA[4] = 0;Change++;}
 
-								if (TA[6] != 0 && TA[10] == 0 && TA[14] == 0 ){ TA[14] = TA[6] ; TA[6] =0;}
-								else if (TA[6] != 0 && TA[10] == 0  ){ TA[10] = TA[6] ; TA[6] = 0;}
+		if (TA[5] != 0 && TA[9] == 0 && TA[13] == 0 ){ TA[13] = TA[5] ; TA[5] = 0;Change++;}
+		else if (TA[5] != 0 && TA[9] == 0  ){ TA[9] = TA[5] ; TA[5] = 0;Change++;}
 
-								if (TA[7] != 0 && TA[11] == 0 && TA[15] == 0 ){ TA[15] = TA[7] ; TA[7] = 0;}
-								else if (TA[7] != 0 && TA[11] == 0  ){ TA[11] = TA[7] ; TA[7] = 0;}
+		if (TA[6] != 0 && TA[10] == 0 && TA[14] == 0 ){ TA[14] = TA[6] ; TA[6] =0;Change++;}
+		else if (TA[6] != 0 && TA[10] == 0  ){ TA[10] = TA[6] ; TA[6] = 0;Change++;}
 
-								if (TA[8] != 0 && TA[12] == 0  ){ TA[12] = TA[8] ; TA[8] = 0;}
+		if (TA[7] != 0 && TA[11] == 0 && TA[15] == 0 ){ TA[15] = TA[7] ; TA[7] = 0;Change++;}
+		else if (TA[7] != 0 && TA[11] == 0  ){ TA[11] = TA[7] ; TA[7] = 0;Change++;}
 
-								if (TA[9] != 0 && TA[13] == 0  ){ TA[13] = TA[9] ; TA[9] = 0;}
+		if (TA[8] != 0 && TA[12] == 0  ){ TA[12] = TA[8] ; TA[8] = 0;Change++;}
 
-								if (TA[10] != 0 && TA[14] == 0  ){ TA[14] = TA[10] ; TA[10] = 0;}
+		if (TA[9] != 0 && TA[13] == 0  ){ TA[13] = TA[9] ; TA[9] = 0;Change++;}
 
-								if (TA[11] != 0 && TA[15] == 0  ){ TA[15] = TA[11] ; TA[11] = 0;}
-							break;
+		if (TA[10] != 0 && TA[14] == 0  ){ TA[14] = TA[10] ; TA[10] = 0;Change++;}
+
+		if (TA[11] != 0 && TA[15] == 0  ){ TA[15] = TA[11] ; TA[11] = 0;Change++;}
+		else()
+		break;
 						
             default:
                 
