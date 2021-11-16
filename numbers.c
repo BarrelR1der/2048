@@ -2,6 +2,7 @@
 // This file takes the numbers from the DisplayQueue provided by the Tile Array file and then displays them on the dogs display.
 // This is done firstly by taking the numbers from the queue one at a time in order and based on order assigning the column and row on the display and then taking each number and printing the bits to display them 
 //  Bits are sent through SPI to the dogs display
+// The UpdateDisplay() function is the task that is called in main to show any board changes. 
 #include "stm32l053xx.h"
 
 void UpdateDisplay(void);
