@@ -626,9 +626,9 @@ switch (move) {
 	   case 3: // Down
 		if ( TA[12]==TA[8] && TA[4]==TA[0])
 								{
-									TA[12]= TA[12]+TA[8];
+									TA[12]=TA[12]+TA[8];
 									TA[8]=0;
-									TA[4]= TA[4]+TA[0];
+									TA[4]=TA[4]+TA[0];
 									TA[0]=0;
 								}
 								else if (TA[12]==TA[8])
@@ -694,7 +694,7 @@ switch (move) {
 								{
 									TA[15]=TA[15]+TA[11];
 									TA[11]=0;
-									TA[6]=TA[6]+TA[3];
+									TA[7]=TA[7]+TA[3];
 									TA[3]=0;
 								}
 								else if (TA[15]==TA[11])
