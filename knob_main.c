@@ -1,5 +1,7 @@
 //This code contains parts from our knob lab given to us by Dr.Carrol.
-//The code has been modified to support two knobs instead of one and involve a queue. 
+//This code in conjunction with the btn.c and btn.h files manages updating the states of the two knobs used to control the game board movements.
+//The Knobs based on Direcciton they are turning send unique numbers to the ButtonQueue that will communicate with the Tile Array file to command movement.
+//The UpdateKnobs() function is the task that is run in main to update the knobs 
 #include "stm32l053xx.h"
 #include "stdint.h"
 #include "btn.h"
