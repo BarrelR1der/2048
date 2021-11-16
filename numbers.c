@@ -1,4 +1,7 @@
 // Matthew Childs
+// This file takes the numbers from the DisplayQueue provided by the Tile Array file and then displays them on the dogs display.
+// This is done firstly by taking the numbers from the queue one at a time in order and based on order assigning the column and row and then taking each number and printing the bits to display them 
+//  Bits are sent through SPI to the dogs display
 #include "stm32l053xx.h"
 
 void UpdateDisplay(void);
@@ -51,7 +54,7 @@ void UpdateDisplay(){
 			switch(slot){                              // switch cases set column and page to correct bit on the display
 				case 1 : 
 					//print1024(75,4);
-					column = 3;
+					column = 3;              //assigns column and page for each slot
 					page = 0;
 					break;
 				case 2 : 
