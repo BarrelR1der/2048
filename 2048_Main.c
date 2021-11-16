@@ -1,4 +1,5 @@
 // Matthew Childs, Evan Dickerson, Cory Thatcher
+// Some functions were adopted from  Dru Walkowski and Matthew Childs Display Lab
 
 
 /*
@@ -217,6 +218,7 @@ void init_gpio(void)
 
 }
 
+//Function to init SPI peripherial
 void init_spi(void)
 { 
 	RCC->APB2ENR |= 1 << (RCC_APB2ENR_SPI1EN_Pos);
@@ -247,7 +249,7 @@ void unfill(uint32_t lsb,uint32_t msb)
 	dis_cmd_0(msb);
 	// turn off pixels in column
 	dis_cmd_1(0x00);
-// eventually this will also be a parmeter
+
 }
 
 
