@@ -1,6 +1,7 @@
 // Matthew Childs, Evan Dickerson, Cory Thatcher
-// Some functions were adopted from  Dru Walkowski and Matthew Childs Display Lab
-
+// functions dis_cmd_0, dis_cmd_1, unfill, and turn_off_all were adopted from  Dru Walkowski and Matthew Childs Display Lab
+// This file initializes all the peripherals and the microcontroller itself
+// This file also sets up the schedule for the tasks
 
 /*
 	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR 
@@ -294,11 +295,11 @@ int main(void)
 	init_display();
 	//GPOIA->ODR |= 1 << 0;
 	init_knobs();
-	turn_off_all();
+	turn_off_all();             //resets display bits to clear the screen
 	while(1)
 	{
 		UpdateKnobs();
-		UpdateArray();
+		UpdateArray();        // Schedule (note that UpdateArray and UpdateDisplay will be passed over if the queue inputs are null so most of the time is spent checking for knob updates) 
 		UpdateDisplay();
 	}
 }
