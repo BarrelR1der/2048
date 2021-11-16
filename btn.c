@@ -1,3 +1,4 @@
+//This is state machine code that was reused from our knob lab which was originally given to us by Dr.Carrol.
 #include "stm32l053xx.h"
 #include <stdint.h>
 #include "btn.h"
