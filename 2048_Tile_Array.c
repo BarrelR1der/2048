@@ -33,9 +33,9 @@ struct Queue {
 void UpdateArray(void)// Update virtual TileArray 
 {
 	if (Count==0){
-		CheckLose();
 		Moving();
 		SpawnRandom();
+		CheckLose();
 		for(int i=0; i<=16; i++){
 			enqueue(DisplayQueue, TA[i]);
 		}
@@ -43,9 +43,9 @@ void UpdateArray(void)// Update virtual TileArray
 	Count++;
 	if(isEmpty(ButtonQueue)){}       //if no input from knobs then skips the task
 	else{
-		CheckLose();
 		Moving();
 		SpawnRandom();
+		CheckLose();
 		for(int i=0; i<=16; i++){
 			enqueue(DisplayQueue, TA[i]);
 		}
