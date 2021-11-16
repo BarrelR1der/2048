@@ -1,4 +1,7 @@
 // Cory Thatcher, Evan Dickerson, Matthew Childs
+// This file sets up the virtual array which takes output from the buttonqueue and provides movment based on which direction the knobs provided.
+// This file also sets up a win/lose scenario. when there is no more movement avaliable on the display the game ends. When the player receives a 2048 a win screen is produced.
+// This file also provides a random number generation for the display. This displays a random 2 after each user movement.
 #include "stm32l053xx.h"
 #include <stdio.h>
 #include <stdlib.h>
