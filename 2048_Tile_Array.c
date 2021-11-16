@@ -34,7 +34,7 @@ void UpdateArray(void)// Update virtual TileArray
 {
 	if (Count==0){
 		Moving();
-		SpawnRandom();
+		SpawnRandom();                                   //First time running this function it will setup the board without needing a user function ie. initializes the board
 		CheckLose();
 		for(int i=0; i<=16; i++){
 			enqueue(DisplayQueue, TA[i]);
@@ -44,20 +44,20 @@ void UpdateArray(void)// Update virtual TileArray
 	if(isEmpty(ButtonQueue)){}       //if no input from knobs then skips the task
 	else{
 		Moving();
-		SpawnRandom();
+		SpawnRandom();                               //task runs in the order of combining and sliding first then spawning a random 2 and finally checks to see if you can move next turn
 		CheckLose();
 		for(int i=0; i<=16; i++){
-			enqueue(DisplayQueue, TA[i]);
+			enqueue(DisplayQueue, TA[i]);       // putting the array values into the queue for the display to pull from
 		}
 	}
 }
 
 
-void SpawnRandom(void)
+void SpawnRandom(void)                             //Randomly picks a number between 1 and 16 and checks for the slot to be empty, will run until an empty slot is found
 {
 	int exit = 0;
 	while(exit ==0){
-		int RandomSlot = Count%16;
+		int RandomSlot = Count%16;                         
 		if(TA[RandomSlot] == 0){
 			TA[RandomSlot]=2;
 			exit =1;
