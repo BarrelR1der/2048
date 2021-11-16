@@ -7,7 +7,6 @@
 // Function List
 int main(void);
 void Moving(void);
-void SpawnRandom2(void);
 void SpawnRandom(void);
 void UpdateArray(void);
 void CheckLose(void);
@@ -67,32 +66,6 @@ void SpawnRandom(void)
 			Count = Count + 3;
 		}
 	}
-}
-
-
-
-
-void SpawnRandom2(void)//Spawns a random number 2 to the TileArray
-{
-	//print4(51,0);
-	int TileArray2[16];
-	//print8(51,0);
-	//print4(51,0);
-	for (int i =0; i<16;i++)
-	{
-	    //print8(51,0);
-		if (TA[i]==0){
-			TileArray2[i]=i;
-		}
-		
-	}
-	//print16(51,2);
-   int Length = sizeof(TileArray2)/sizeof(TA[0]);
-	int random_number= rand() % Length;
-	TA[TileArray2[random_number]]=2;
-	//print64(51,4);
-
-
 }
 
 
@@ -353,6 +326,7 @@ void CheckLose(void)// Checks the TileArray for possible lose scenarios
 	{
 
 	}
+	//checks if shift are possible
 	else if (TA[12] != 0 && TA[8] == 0 && TA[4] == 0 && TA[0] ==0){}
 	else if (TA[12] != 0 && TA[8] == 0 && TA[4] == 0){}
 	else if (TA[12] != 0 && TA[8] == 0){}
