@@ -1,3 +1,5 @@
+//This code contains parts from our knob lab given to us by Dr.Carrol.
+//The code has been modified to support two knobs instead of one and involve a queue. 
 #include "stm32l053xx.h"
 #include "stdint.h"
 #include "btn.h"
