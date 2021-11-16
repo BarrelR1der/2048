@@ -31,7 +31,7 @@ struct Queue {
     int* array;
 };
 
-void UpdateArray(void)
+void UpdateArray(void)// Update virtual TileArray 
 {
 	if (Count==0){
 		CheckLose();
@@ -72,7 +72,7 @@ void SpawnRandom(void)
 
 
 
-void SpawnRandom2(void)
+void SpawnRandom2(void)//Spawns a random number 2 to the TileArray
 {
 	//print4(51,0);
 	int TileArray2[16];
@@ -96,7 +96,7 @@ void SpawnRandom2(void)
 }
 
 
-void CheckLose(void)
+void CheckLose(void)// Checks the TileArray for possible lose scenarios 
 {
 	if ( TA[12]==TA[8] && TA[4]==TA[0])
 	{
@@ -499,7 +499,7 @@ void CheckLose(void)
 	}
 }
 
-void Moving(void)
+void Moving(void)// This is the main combinational logic function of the virtual TileArray which allows movement of up,down,left,right
 {
 int move = front(ButtonQueue);
 dequeue(ButtonQueue);
