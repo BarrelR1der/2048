@@ -71,410 +71,174 @@ void SpawnRandom(void)
 
 void CheckLose(void)// Checks the TileArray for possible lose scenarios 
 {
-	if ( TA[12]==TA[8] && TA[4]==TA[0])
-	{
-	
-	}
-	else if (TA[12]==TA[8])
-	{
-
-	}
-	else if (TA[8]==TA[4])
-	{
-
-	}
-	else if (TA[4]==TA[0])
-	{
-
-	}
-	else if (TA[13]==TA[9] && TA[5]==TA[1])
-	{
-
-	}
-	else if (TA[13]==TA[9])
-	{
-
-	}
-	else if (TA[9]==TA[5])
-	{
-
-	}
-	else if (TA[5]==TA[1])
-	{
-
-	}
-	else if (TA[14]==TA[10] && TA[6]==TA[2])
-	{
-
-	}
-	else if (TA[14]==TA[10])
-	{
-
-	}
-	else if (TA[10]==TA[6])
-	{
-
-	}
-	else if (TA[6]==TA[2])
-	{
-
-	}
-	else if (TA[15]==TA[11] && TA[7]==TA[3])
-	{
-
-	}
-	else if (TA[15]==TA[11])
-	{
-
-	}
-	else if (TA[11]==TA[7])
-	{
-
-	}
-	else if (TA[7]==TA[3])
-	{
-
-	}
-	else if ( TA[3]==TA[2] && TA[1]==TA[0])
-	{
-
-	}
-	else if (TA[3]==TA[2])
-	{
-
-	}
-	else if (TA[2]==TA[1])
-	{
-
-	}
-	else if (TA[1]==TA[0])
-	{
-
-	}
-	else if (TA[7]==TA[6] && TA[5]==TA[4])
-	{
-
-	}
-	else if (TA[7]==TA[6])
-	{
-
-	}
-	else if (TA[6]==TA[5])
-	{
-
-	}
-	else if (TA[5]==TA[4])
-	{
-
-	}
-	else if (TA[11]==TA[10] && TA[9]==TA[8])
-	{
-
-	}
-	else if (TA[11]==TA[10])
-	{
-
-	}
-	else if (TA[10]==TA[9])
-	{
-
-	}
-	else if (TA[9]==TA[8])
-	{
-
-	}
-	else if (TA[15]==TA[14] && TA[13]==TA[12])
-	{
-
-	}
-	else if (TA[15]==TA[14])
-	{
-
-	}
-	else if (TA[14]==TA[13])
-	{
-
-	}
-	else if (TA[13]==TA[12])
-	{
-
-	}
-	else if ( TA[3]==TA[2] && TA[1]==TA[0])
-	{
-
-	}
-	else if (TA[3]==TA[2])
-	{
-
-	}
-	else if (TA[2]==TA[1])
-	{
-
-	}
-	else if (TA[1]==TA[0])
-	{
-	}
-	else if (TA[7]==TA[6] && TA[5]==TA[4])
-	{
-
-	}
-	else if (TA[7]==TA[6])
-	{
-
-	}
-	else if (TA[6]==TA[5])
-	{
-
-	}
-	else if (TA[5]==TA[4])
-	{
-
-	}
-	else if (TA[11]==TA[10] && TA[9]==TA[8])
-	{
-
-	}
-	else if (TA[11]==TA[10])
-	{
-
-	}
-	else if (TA[10]==TA[9])
-	{
-
-	}
-	else if (TA[9]==TA[8])
-	{
-
-	}
-	else if (TA[15]==TA[14] && TA[13]==TA[12])
-	{
-
-	}
-	else if (TA[15]==TA[14])
-	{
-
-	}
-	else if (TA[14]==TA[13])
-	{
-
-	}
-	else if (TA[13]==TA[12])
-	{
-
-	}
-	else if ( TA[12]==TA[8] && TA[4]==TA[0])
-	{
-
-	}
-	else if (TA[12]==TA[8])
-	{
-
-	}
-	else if (TA[8]==TA[4])
-	{
-
-	}
-	else if (TA[4]==TA[0])
-	{
-
-	}
-	else if (TA[13]==TA[9] && TA[5]==TA[1])
-	{
-
-	}
-	else if (TA[13]==TA[9])
-	{
-
-	}
-	else if (TA[9]==TA[5])
-	{
-
-	}
-	else if (TA[5]==TA[1])
-	{
-
-	}
-	else if (TA[14]==TA[10] && TA[6]==TA[2])
-	{
-
-	}
-	else if (TA[14]==TA[10])
-	{
-
-	}
-	else if (TA[10]==TA[6])
-	{
-
-	}
-	else if (TA[6]==TA[2])
-	{
-
-	}
-	else if (TA[15]==TA[11] && TA[7]==TA[3])
-	{
-
-	}
-	else if (TA[15]==TA[11])
-	{
-
-	}
-	else if (TA[11]==TA[7])
-	{
-
-	}
-	else if (TA[7]==TA[3])
-	{
-
-	}
+	//Checks if combinations are available
+	if ( TA[12]==TA[8] && TA[4]==TA[0]){}
+	else if (TA[12]==TA[8]){}
+	else if (TA[8]==TA[4]){}
+	else if (TA[4]==TA[0]){}
+	else if (TA[13]==TA[9] && TA[5]==TA[1]){}
+	else if (TA[13]==TA[9]){}
+	else if (TA[9]==TA[5]){}
+	else if (TA[5]==TA[1]){}
+	else if (TA[14]==TA[10] && TA[6]==TA[2]){}
+	else if (TA[14]==TA[10]){}
+	else if (TA[10]==TA[6]){}
+	else if (TA[6]==TA[2]){}
+	else if (TA[15]==TA[11] && TA[7]==TA[3]){}
+	else if (TA[15]==TA[11]){}
+	else if (TA[11]==TA[7]){}
+	else if (TA[7]==TA[3]){}
+	else if ( TA[3]==TA[2] && TA[1]==TA[0]){}
+	else if (TA[3]==TA[2]){}
+	else if (TA[2]==TA[1]){}
+	else if (TA[1]==TA[0]){}
+	else if (TA[7]==TA[6] && TA[5]==TA[4]){}
+	else if (TA[7]==TA[6]){}
+	else if (TA[6]==TA[5]){}
+	else if (TA[5]==TA[4]){}
+	else if (TA[11]==TA[10] && TA[9]==TA[8]){}
+	else if (TA[11]==TA[10]){}
+	else if (TA[10]==TA[9]){}
+	else if (TA[9]==TA[8]){}
+	else if (TA[15]==TA[14] && TA[13]==TA[12]){}
+	else if (TA[15]==TA[14]){}
+	else if (TA[14]==TA[13]){}
+	else if (TA[13]==TA[12]){}
+	else if ( TA[3]==TA[2] && TA[1]==TA[0]){}
+	else if (TA[3]==TA[2]){}
+	else if (TA[2]==TA[1]){}
+	else if (TA[1]==TA[0]){}
+	else if (TA[7]==TA[6] && TA[5]==TA[4]){}
+	else if (TA[7]==TA[6]){}
+	else if (TA[6]==TA[5]){}
+	else if (TA[5]==TA[4]){}
+	else if (TA[11]==TA[10] && TA[9]==TA[8]){}
+	else if (TA[11]==TA[10]){}
+	else if (TA[10]==TA[9]){}
+	else if (TA[9]==TA[8]){}
+	else if (TA[15]==TA[14] && TA[13]==TA[12]){}
+	else if (TA[15]==TA[14]){}
+	else if (TA[14]==TA[13]){}
+	else if (TA[13]==TA[12]){}
+	else if ( TA[12]==TA[8] && TA[4]==TA[0]){}
+	else if (TA[12]==TA[8]){}
+	else if (TA[8]==TA[4]){}
+	else if (TA[4]==TA[0]){}
+	else if (TA[13]==TA[9] && TA[5]==TA[1]){}
+	else if (TA[13]==TA[9]){}
+	else if (TA[9]==TA[5]){}
+	else if (TA[5]==TA[1]){}
+	else if (TA[14]==TA[10] && TA[6]==TA[2]){}
+	else if (TA[14]==TA[10]){}
+	else if (TA[10]==TA[6]){}
+	else if (TA[6]==TA[2]){}
+	else if (TA[15]==TA[11] && TA[7]==TA[3]){}
+	else if (TA[15]==TA[11]){}
+	else if (TA[11]==TA[7]){}
+	else if (TA[7]==TA[3]){}
 	//checks if shift are possible
 	else if (TA[12] != 0 && TA[8] == 0 && TA[4] == 0 && TA[0] ==0){}
 	else if (TA[12] != 0 && TA[8] == 0 && TA[4] == 0){}
 	else if (TA[12] != 0 && TA[8] == 0){}
-
 	else if (TA[13] != 0 && TA[9] == 0 && TA[5] == 0 && TA[1] ==0 ){}
 	else if (TA[13] != 0 && TA[9] == 0 && TA[5] == 0 ){}
 	else if (TA[13] != 0 && TA[9] == 0  ){}
-
 	else if (TA[14] != 0 && TA[10] == 0 && TA[6] == 0 && TA[2] ==0 ){}
 	else if (TA[14] != 0 && TA[10] == 0 && TA[6] == 0 ){}
 	else if (TA[14] != 0 && TA[10] == 0  ){}
-
 	else if (TA[15] != 0 && TA[11] == 0 && TA[7] == 0 && TA[3] ==0 ){}
 	else if (TA[15] != 0 && TA[11] == 0 && TA[7] == 0 ){}
 	else if (TA[15] != 0 && TA[11] == 0  ){}
-
 	else if (TA[8] != 0 && TA[4] == 0 && TA[0] == 0){}
 	else if (TA[8] != 0 && TA[4] == 0  ){}
-
 	else if (TA[9] != 0 && TA[5] == 0 && TA[1] == 0){}
 	else if (TA[9] != 0 && TA[5] == 0  ){}
-
 	else if (TA[10] != 0 && TA[6] == 0 && TA[2] == 0){}
 	else if (TA[10] != 0 && TA[6] == 0  ){}
-
 	else if (TA[11] != 0 && TA[7] == 0 && TA[3] == 0){}
 	else if (TA[11] != 0 && TA[7] == 0){}
-
 	else if (TA[4] != 0 && TA[0] == 0){}
-
 	else if (TA[5] != 0 && TA[1] == 0){}
-
 	else if (TA[6] != 0 && TA[2] == 0){}
-
 	else if (TA[7] != 0 && TA[3] == 0){}
-	
 	else if (TA[0] != 0 && TA[1] == 0 && TA[2] == 0 && TA[3] ==0 ){}
 	else if (TA[0] != 0 && TA[1] == 0 && TA[2] == 0 ){}
 	else if (TA[0] != 0 && TA[1] == 0  ){}
-
 	else if (TA[4] != 0 && TA[5] == 0 && TA[6] == 0 && TA[7] ==0 ){}
 	else if (TA[4] != 0 && TA[5] == 0 && TA[6] == 0 ){}
 	else if (TA[4] != 0 && TA[5] == 0  ){}
-
 	else if (TA[8] != 0 && TA[9] == 0 && TA[10] == 0 && TA[11] ==0 ){}
 	else if (TA[8] != 0 && TA[9] == 0 && TA[10] == 0 ){}
 	else if (TA[8] != 0 && TA[9] == 0  ){}
-
 	else if (TA[12] != 0 && TA[13] == 0 && TA[14] == 0 && TA[15] ==0 ){}
 	else if (TA[12] != 0 && TA[13] == 0 && TA[14] == 0 ){}
 	else if (TA[12] != 0 && TA[13] == 0  ){}
-
 	else if (TA[1] != 0 && TA[2] == 0 && TA[3] == 0 ){}
 	else if (TA[1] != 0 && TA[2] == 0  ){}
-
 	else if (TA[5] != 0 && TA[6] == 0 && TA[6] == 0 ){}
 	else if (TA[5] != 0 && TA[6] == 0  ){}
-
 	else if (TA[9] != 0 && TA[10] == 0 && TA[11] == 0 ){}
 	else if (TA[9] != 0 && TA[10] == 0  ){}
-
 	else if (TA[13] != 0 && TA[14] == 0 && TA[15] == 0 ){}
 	else if (TA[13] != 0 && TA[14] == 0  ){}
-
 	else if (TA[2] != 0 && TA[3] == 0  ){}
-
 	else if (TA[6] != 0 && TA[7] == 0  ){}
-
-	else if (TA[10] != 0 && TA[11] == 0  ){}
-		
+	else if (TA[10] != 0 && TA[11] == 0  ){}	
 	else if (TA[3] != 0 && TA[2] == 0 && TA[1] == 0 && TA[0] ==0 ){}
 	else if (TA[3] != 0 && TA[2] == 0 && TA[1] == 0 ){}
 	else if (TA[3] != 0 && TA[2] == 0  ){}
-
 	else if (TA[7] != 0 && TA[5] == 0 && TA[6] == 0 && TA[4] ==0 ){}
 	else if (TA[7] != 0 && TA[5] == 0 && TA[6] == 0 ){}
 	else if (TA[7] != 0 && TA[6] == 0  ){}
-
 	else if (TA[11] != 0 && TA[9] == 0 && TA[10] == 0 && TA[8] ==0 ){}
 	else if (TA[11] != 0 && TA[9] == 0 && TA[10] == 0 ){}
 	else if (TA[11] != 0 && TA[10] == 0  ){}
-
 	else if (TA[15] != 0 && TA[13] == 0 && TA[14] == 0 && TA[12] ==0 ){}
 	else if (TA[15] != 0 && TA[13] == 0 && TA[14] == 0 ){}
 	else if (TA[15] != 0 && TA[14] == 0  ){}
-
 	else if (TA[2] != 0 && TA[1] == 0 && TA[0] == 0 ){}
 	else if (TA[2] != 0 && TA[1] == 0  ){}
-
 	else if (TA[6] != 0 && TA[5] == 0 && TA[4] == 0 ){}
 	else if (TA[6] != 0 && TA[5] == 0  ){}
-
 	else if (TA[10] != 0 && TA[9] == 0 && TA[8] == 0 ){}
 	else if (TA[10] != 0 && TA[9] == 0  ){}
-
 	else if (TA[14] != 0 && TA[13] == 0 && TA[12] == 0 ){}
 	else if (TA[14] != 0 && TA[13] == 0 ){}
-
 	else if (TA[1] != 0 && TA[0] == 0  ){}
-
 	else if (TA[5] != 0 && TA[4] == 0  ){}
-
 	else if (TA[9] != 0 && TA[8] == 0  ){}
-
-	else if (TA[13] != 0 && TA[12] == 0  ){}
-		
+	else if (TA[13] != 0 && TA[12] == 0  ){}	
 	else if (TA[0] != 0 && TA[4] == 0 && TA[8] == 0 && TA[12] ==0 ){}
 	else if (TA[0] != 0 && TA[4] == 0 && TA[8] == 0 ){}
 	else if (TA[0] != 0 && TA[4] == 0  ){}
-
 	else if (TA[1] != 0 && TA[5] == 0 && TA[9] == 0 && TA[13] ==0 ){}
 	else if (TA[1] != 0 && TA[5] == 0 && TA[9] == 0 ){}
 	else if (TA[1] != 0 && TA[5] == 0  ){}
-
 	else if (TA[2] != 0 && TA[6] == 0 && TA[10] == 0 && TA[14] ==0 ){}
 	else if (TA[2] != 0 && TA[6] == 0 && TA[10] == 0 ){}
 	else if (TA[2] != 0 && TA[6] == 0  ){}
-
 	else if (TA[3] != 0 && TA[7] == 0 && TA[11] == 0 && TA[15] ==0 ){}
 	else if (TA[3] != 0 && TA[7] == 0 && TA[11] == 0 ){}
 	else if (TA[3] != 0 && TA[7] == 0  ){}
-
 	else if (TA[4] != 0 && TA[8] == 0 && TA[12] == 0 ){}
 	else if (TA[4] != 0 && TA[8] == 0  ){}
-
 	else if (TA[5] != 0 && TA[9] == 0 && TA[13] == 0 ){}
 	else if (TA[5] != 0 && TA[9] == 0  ){}
-
 	else if (TA[6] != 0 && TA[10] == 0 && TA[14] == 0 ){}
 	else if (TA[6] != 0 && TA[10] == 0  ){}
-
 	else if (TA[7] != 0 && TA[11] == 0 && TA[15] == 0 ){}
 	else if (TA[7] != 0 && TA[11] == 0  ){}
-
 	else if (TA[8] != 0 && TA[12] == 0  ){}
-
 	else if (TA[9] != 0 && TA[13] == 0  ){}
-
 	else if (TA[10] != 0 && TA[14] == 0  ){}
-
 	else if (TA[11] != 0 && TA[15] == 0  ){}
 	else{
-	    TA[0]=99;
+	    TA[0]=99; //putting a 99 in the queue will result in a "you lose" screen
 	}
 }
 
-void Moving(void)// This is the main combinational logic function of the virtual TileArray which allows movement of up,down,left,right
-{
+void Moving(void)// This is the main combinational logic function of the virtual TileArray which allows movement of up,down,left,right		 
+{                // Function checks the queue for 0"UP" 1"Right" 2"Left" and 3"Down" and then checks for combination and sliding of numbers in all rows/columns based on direction
 int move = front(ButtonQueue);
 dequeue(ButtonQueue);
 switch (move) {
