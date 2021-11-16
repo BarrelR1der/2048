@@ -115,7 +115,7 @@ void UpdateDisplay(){
 					page = 6;
 					break;
 				default :
-					print512(75,2);					
+					print512(75,2);			 //used for testing, should never reach this 
 					column =1;
 					page =1;
 					break;
@@ -144,9 +144,9 @@ void UpdateDisplay(){
 					break;
 				case 1024 : print1024(column,page);
 					break;
-				case 2048 : while(1){printwin();}
+				case 2048 : while(1){printwin();}       // prints the win screen indefinitely once you have won
 					break;
-				case 99 : while(1){printlose();}
+				case 99 : while(1){printlose();}        // prints the loss screen indefintely once you have lsot
 					break;
 				default: printnull(column,page);
 					break;
