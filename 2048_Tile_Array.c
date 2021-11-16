@@ -45,7 +45,7 @@ void UpdateArray(void)// Update virtual TileArray
 	else{
 		Change = 0;
 		Moving();
-		if(Count != 0){
+		if(Change != 0){
 			SpawnRandom();                               //task runs in the order of combining and sliding first then spawning a random 2 and finally checks to see if you can move next turn
 		}
 		CheckLose();
@@ -386,7 +386,7 @@ switch (move) {
 		if (TA[6] != 0 && TA[2] == 0){ TA[2] = TA[6] ; TA[6] = 0;Change++;}
 
 		if (TA[7] != 0 && TA[3] == 0){ TA[3] = TA[7] ; TA[7] = 0;Change++;}
-		else()
+		else{};
                 break;
             case 1: // Right
                 if ( TA[3]==TA[2] && TA[1]==TA[0])
@@ -530,7 +530,7 @@ switch (move) {
 		if (TA[10] != 0 && TA[11] == 0  ){ TA[11] = TA[10] ; TA[10] = 0;Change++;}
 
 		if (TA[13] != 0 && TA[14] == 0  ){ TA[14] = TA[13] ; TA[13] = 0;Change++;}
-		else()
+		else{};
                 break;
 								
             case 2: // Left
@@ -674,7 +674,7 @@ switch (move) {
 		if (TA[9] != 0 && TA[8] == 0  ){ TA[8] = TA[9] ; TA[9] = 0;Change++;}
 
 		if (TA[13] != 0 && TA[12] == 0  ){ TA[12] = TA[13] ; TA[13] = 0;Change++;}
-		else()
+		else{};
 
                 break;
 	   case 3: // Down
@@ -818,7 +818,7 @@ switch (move) {
 		if (TA[10] != 0 && TA[14] == 0  ){ TA[14] = TA[10] ; TA[10] = 0;Change++;}
 
 		if (TA[11] != 0 && TA[15] == 0  ){ TA[15] = TA[11] ; TA[11] = 0;Change++;}
-		else()
+		else{};
 		break;
 						
             default:
