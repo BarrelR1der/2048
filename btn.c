@@ -1,4 +1,5 @@
 //This is state machine code that was reused from our knob lab which was originally given to us by Dr.Carrol.
+// This is the state machine for the knobs that detects the activating edge of each knob and provides a state sent into the button queue.
 #include "stm32l053xx.h"
 #include <stdint.h>
 #include "btn.h"
