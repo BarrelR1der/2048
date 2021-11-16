@@ -55,17 +55,17 @@ struct Queue* createQueue(unsigned capacity)
         queue->capacity * sizeof(int));
     return queue;
 }
-
+//checks if queue is full
 int isFull(struct Queue* queue)
 {
     return (queue->size == queue->capacity);
 }
-
+//checks if queue is empty
 int isEmpty(struct Queue* queue)
 {
     return (queue->size == 0);
 }
- 
+ //add to the queue
 void enqueue(struct Queue* queue, int item)
 {
     if (isFull(queue))
@@ -75,7 +75,7 @@ void enqueue(struct Queue* queue, int item)
     queue->array[queue->rear] = item;
     queue->size = queue->size + 1;
 }
-
+//remove from queue
 int dequeue(struct Queue* queue)
 {
     if (isEmpty(queue))
@@ -101,7 +101,7 @@ int rear(struct Queue* queue)
     return queue->array[queue->rear];
 }
 
-
+//Initialize display
 void init_display(void)
 {
 	// turn on display 
@@ -156,7 +156,7 @@ void dis_cmd_1(uint32_t com)
 	GPIOA->ODR |= 1 << 4;
 	
 }
-
+//Initialize GPIO
 void init_gpio(void)
 {
 	// turning on the clk A
@@ -278,7 +278,7 @@ struct Queue* ButtonQueue;
 struct Queue* DisplayQueue;
 
 int junk;
-
+//Main Function
 int main(void)
 
 {
@@ -304,7 +304,6 @@ int main(void)
 	
 	UpdateArray();
 	UpdateDisplay();
-	//print512(3,0);
 	while(1)
 	{
 		UpdateKnobs();
