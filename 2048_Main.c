@@ -277,7 +277,6 @@ void turn_off_all(void)
 struct Queue* ButtonQueue;
 struct Queue* DisplayQueue;
 
-int junk;
 //Main Function
 int main(void)
 
@@ -293,17 +292,7 @@ int main(void)
 	init_display();
 	//GPOIA->ODR |= 1 << 0;
 	init_knobs();
-	
-	
-	junk++;
-	
-	srand(1);
-	junk--;
-	
 	turn_off_all();
-	
-	UpdateArray();
-	UpdateDisplay();
 	while(1)
 	{
 		UpdateKnobs();
